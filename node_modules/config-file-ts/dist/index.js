@@ -1,0 +1,254 @@
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var glob = require('glob');
+var path = require('path');
+var ts = require('typescript');
+var fs = require('fs');
+var os = require('os');
+
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+var glob__default = /*#__PURE__*/_interopDefaultLegacy(glob);
+var path__default = /*#__PURE__*/_interopDefaultLegacy(path);
+var ts__default = /*#__PURE__*/_interopDefaultLegacy(ts);
+var fs__default = /*#__PURE__*/_interopDefaultLegacy(fs);
+var os__default = /*#__PURE__*/_interopDefaultLegacy(os);
+
+function tsCompile(fileNames, options) {
+    console.log("compiling:", fileNames);
+    const program = ts.createProgram(fileNames, options);
+    const sources = program
+        .getSourceFiles()
+        .map((f) => f.fileName)
+        .filter((name) => !name.includes("node_modules"));
+    const emitResult = program.emit();
+    logDiagnostics(program, emitResult);
+    return { localSources: sources, compiled: !emitResult.emitSkipped };
+}
+function logDiagnostics(program, emitResult) {
+    const allDiagnostics = ts.getPreEmitDiagnostics(program)
+        .concat(emitResult.diagnostics);
+    allDiagnostics.forEach((diagnostic) => {
+        if (diagnostic.file) {
+            const { line, character } = diagnostic.file.getLineAndCharacterOfPosition(diagnostic.start);
+            const message = ts.flattenDiagnosticMessageText(diagnostic.messageText, "\n");
+            const filePath = path__default['default'].resolve(diagnostic.file.fileName);
+            console.log(`tsc: (${filePath}:${line + 1}:${character + 1}): ${message}`);
+        }
+        else {
+            console.log(ts.flattenDiagnosticMessageText(diagnostic.messageText, "\n"));
+        }
+    });
+}
+
+const fsRoot = path__default['default'].parse(process.cwd()).root;
+/** Return true if any files need compiling */
+function needsCompile(srcGlobs, outDir) {
+    const files = srcGlobs.flatMap((src) => glob__default['default'].sync(src));
+    const srcDestPairs = compilationPairs(files, outDir);
+    return anyOutDated(srcDestPairs);
+}
+/** Return true if all files exist on the filesystem */
+function expectFilesExist(files) {
+    const missing = files.find((file) => !fs__default['default'].existsSync(file));
+    if (missing) {
+        return false;
+    }
+    return true;
+}
+/** @return path to the js file that will be produced by typescript compilation */
+function jsOutFile(tsFile, outDir) {
+    const tsAbsolutePath = path__default['default'].resolve(tsFile);
+    const tsAbsoluteDir = path__default['default'].dirname(tsAbsolutePath);
+    const dirFromRoot = path__default['default'].relative(fsRoot, tsAbsoluteDir);
+    const jsDir = path__default['default'].join(outDir, dirFromRoot);
+    const outFile = changeSuffix(path__default['default'].basename(tsFile), ".js");
+    return path__default['default'].join(jsDir, outFile);
+}
+/*
+We set rootDir to fsRoot for tsc compilation.
+
+That means that the .js output files produced by typescript will be in a deep tree
+of subdirectories mirroring the path from / to the source file.
+  e.g. /home/lee/proj/foo.ts will output to outdir/home/proj/lee/foo.js.
+
+We need to set a rootDir so that the output tree js files produced by typescript is
+predictable prior to compilation. Without a rootDir, tsc will make an output tree that
+is as short as possible depending on the imports used by the .ts files. Shorter is nice,
+but the unpredictability breaks checks for on-demand compilation.
+
+A .ts file can import from parent directories.
+  e.g. import * from "../util".
+So we use the file system root as the rootDir to be conservative in handling
+potential parent directory imports.
+*/
+function compileIfNecessary(sources, outDir, strict = true) {
+    const sourceSet = new Set([...sources, ...extendedSources(outDir)]);
+    const allSources = [...sourceSet];
+    if (needsCompile(allSources, outDir)) {
+        const { compiled, localSources } = tsCompile(sources, {
+            outDir,
+            rootDir: fsRoot,
+            module: ts__default['default'].ModuleKind.CommonJS,
+            moduleResolution: ts__default['default'].ModuleResolutionKind.NodeJs,
+            esModuleInterop: true,
+            skipLibCheck: true,
+            strict,
+            target: ts__default['default'].ScriptTarget.ES2019,
+            noImplicitAny: false,
+            noEmitOnError: true,
+        });
+        if (compiled) {
+            saveExtendedSources(outDir, localSources);
+            linkNodeModules(outDir);
+        }
+        return compiled;
+    }
+    return true;
+}
+/** local sources used in last compilation, including imports */
+function extendedSources(outDir) {
+    const file = sourcesFile(outDir);
+    if (!fs__default['default'].existsSync(file)) {
+        return [];
+    }
+    const lines = fs__default['default'].readFileSync(file, "utf8");
+    return lines.split("\n");
+}
+function sourcesFile(outDir) {
+    return path__default['default'].join(outDir, "_sources");
+}
+function saveExtendedSources(outDir, allSources) {
+    const file = sourcesFile(outDir);
+    fs__default['default'].writeFileSync(file, allSources.join("\n"));
+}
+/** Put a link in the output directory to node_modules.
+ */
+function linkNodeModules(outDir) {
+    /*
+     * Note that this only puts a link to the single node_modules directory
+     * that's closest by.
+     *
+     * But I think node's module resolution will search multiple
+     * parent directories for multiple node_modules at runtime. So just one
+     * node_modules link may be insufficient in some complicated cases.
+     *
+     * If supporting the more complicated case is worthwhile, we can consider
+     * e.g. encoding a full list of node_modules and setting NODE_PATH instead
+     * of the symlink approach here.
+     */
+    const nodeModules = nearestNodeModules(process.cwd());
+    if (nodeModules) {
+        const linkToModules = path__default['default'].join(outDir, "node_modules");
+        symLinkForce(nodeModules, linkToModules);
+    }
+}
+/** create a symlink, replacing any existing linkfile */
+function symLinkForce(existing, link) {
+    if (fs__default['default'].existsSync(link)) {
+        if (!fs__default['default'].lstatSync(link).isSymbolicLink()) {
+            throw `symLinkForce refusing to unlink non-symlink ${link}`;
+        }
+        fs__default['default'].unlinkSync(link);
+    }
+    fs__default['default'].symlinkSync(existing, link);
+}
+/** @return the resolved path to the nearest node_modules file,
+ * either in the provided directory or a parent.
+ */
+function nearestNodeModules(dir) {
+    const resolvedDir = path__default['default'].resolve(dir);
+    const modulesFile = path__default['default'].join(resolvedDir, "node_modules");
+    if (fs__default['default'].existsSync(modulesFile)) {
+        return modulesFile;
+    }
+    else {
+        const { dir: parent, root } = path__default['default'].parse(resolvedDir);
+        if (parent !== root) {
+            return nearestNodeModules(parent);
+        }
+        else {
+            return undefined;
+        }
+    }
+}
+/**
+ * Compile a typescript config file to js if necessary (if the js
+ * file doesn't exist or is older than the typescript file).
+ *
+ * @param tsFile path to ts config file
+ * @param outDir directory to place the compiled js file
+ * @returns the path to the compiled javascript config file,
+ *   or undefined if the compilation fails.
+ */
+function compileConfigIfNecessary(tsFile, outDir, strict = true) {
+    if (!fs__default['default'].existsSync(tsFile)) {
+        console.error("config file:", tsFile, " not found");
+        return undefined;
+    }
+    const success = compileIfNecessary([tsFile], outDir, strict);
+    if (!success) {
+        return undefined;
+    }
+    return jsOutFile(tsFile, outDir);
+}
+function compilationPairs(srcFiles, outDir) {
+    return srcFiles.map((tsFile) => {
+        return [tsFile, jsOutFile(tsFile, outDir)];
+    });
+}
+function anyOutDated(filePairs) {
+    const found = filePairs.find(([srcPath, outPath]) => {
+        if (!fs__default['default'].existsSync(outPath)) {
+            return true;
+        }
+        const srcTime = fs__default['default'].statSync(srcPath).mtime;
+        const outTime = fs__default['default'].statSync(outPath).mtime;
+        return srcTime > outTime;
+    });
+    return found !== undefined;
+}
+function changeSuffix(filePath, suffix) {
+    const dir = path__default['default'].dirname(filePath);
+    const curSuffix = path__default['default'].extname(filePath);
+    const base = path__default['default'].basename(filePath, curSuffix);
+    return path__default['default'].join(dir, base + suffix);
+}
+
+/** Load a typescript configuration file.
+ * For speed, the typescript file is transpiled to javascript and cached.
+ *
+ * @param T type of default export value in the configuration file
+ * @param outDir location to store the compiled javascript.
+ * @returns the default exported value from the configuration file or undefined
+ */
+function loadTsConfig(tsFile, outDir, strict = true) {
+    const realOutDir = outDir || defaultOutDir(tsFile, "config-file-ts");
+    const jsConfig = compileConfigIfNecessary(tsFile, realOutDir, strict);
+    if (!jsConfig) {
+        return undefined;
+    }
+    const end = jsConfig.length - path__default['default'].extname(jsConfig).length;
+    const requirePath = jsConfig.slice(0, end);
+    const config = require(requirePath);
+    return config.default;
+}
+/** @return the directory that will be used to store transpilation output. */
+function defaultOutDir(tsFile, programName = "") {
+    const tsPath = path__default['default'].resolve(tsFile);
+    const smushedPath = tsPath
+        .split(path__default['default'].sep)
+        .join("-")
+        .slice(1);
+    return path__default['default'].join(os__default['default'].homedir(), ".cache", programName, smushedPath);
+}
+
+exports.compileIfNecessary = compileIfNecessary;
+exports.defaultOutDir = defaultOutDir;
+exports.expectFilesExist = expectFilesExist;
+exports.jsOutFile = jsOutFile;
+exports.loadTsConfig = loadTsConfig;
+exports.symLinkForce = symLinkForce;
+//# sourceMappingURL=index.js.map

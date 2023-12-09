@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        iframe {
+            overflow: auto;
+            height: auto;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="../../assets/bootstrap/css/bootstrap.css">
+    <!-- HELPERS -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/animate.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/backgrounds.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/boilerplate.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/border-radius.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/grid.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/page-transitions.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/spacing.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/typography.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/utils.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/colors.css">
+
+    <!-- ELEMENTS -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/badges.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/buttons.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/content-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/dashboard-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/forms.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/images.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/info-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/invoice.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/loading-indicators.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/menus.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/panel-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/response-messages.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/responsive-tables.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/ribbon.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/social-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/tables.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/tile-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/timeline.css">
+
+    <!-- ICONS -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/icons/fontawesome/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/icons/linecons/linecons.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/icons/spinnericon/spinnericon.css">
+
+
+    <!-- WIDGETS -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/accordion-ui/accordion.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/calendar/calendar.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/carousel/carousel.css">
+
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/charts/justgage/justgage.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/charts/morris/morris.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/charts/piegage/piegage.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/charts/xcharts/xcharts.css">
+
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/chosen/chosen.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/colorpicker/colorpicker.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/datatable/datatable.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/datepicker/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/datepicker-ui/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/dialog/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/dropdown/dropdown.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/dropzone/dropzone.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/file-input/fileinput.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/input-switch/inputswitch.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/input-switch/inputswitch-alt.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/ionrangeslider/ionrangeslider.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/jcrop/jcrop.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/jgrowl-notifications/jgrowl.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/loading-bar/loadingbar.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/maps/vector-maps/vectormaps.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/markdown/markdown.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/modal/modal.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/multi-select/multiselect.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/multi-upload/fileupload.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/nestable/nestable.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/noty-notifications/noty.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/popover/popover.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/pretty-photo/prettyphoto.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/progressbar/progressbar.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/range-slider/rangeslider.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/slidebars/slidebars.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/slider-ui/slider.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/summernote-wysiwyg/summernote-wysiwyg.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/tabs-ui/tabs.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../assets/widgets/theme-switcher/themeswitcher.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/timepicker/timepicker.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/tocify/tocify.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/tooltip/tooltip.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/touchspin/touchspin.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/uniform/uniform.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/wizard/wizard.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/xeditable/xeditable.css">
+
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/sweet-alert/sweetalert2.min.css">
+
+    <!-- SNIPPETS -->
+
+    <!-- <link rel="stylesheet" type="text/css" href="../../assets/snippets/chat.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/files-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/login-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/notification-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/progress-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/todo.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/user-profile.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/mobile-navigation.css"> -->
+
+    <!-- APPLICATIONS -->
+
+    <!-- <link rel="stylesheet" type="text/css" href="../../assets/applications/mailbox.css"> -->
+
+    <!-- Admin theme -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/themes/admin/layout.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/themes/admin/color-schemes/default.css">
+
+    <!-- Components theme -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/themes/components/default.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/themes/components/border-radius.css">
+
+    <!-- Admin responsive -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/responsive-elements.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/admin-responsive.css">
+
+
+    <script>
+        if (typeof module === 'object') { window.module = module; module = undefined; } 
+    </script>
+
+    <script type="text/javascript" src="../../assets/js-core/jquery-core.js"></script>
+
+    <!-- <script type="text/javascript" src="../../assets/js-core/c"></script>
+     <script type="text/javascript" src="../../assets/js-core/jquery-ui-mouse.js"></script>
+    <script type="text/javascript" src="../../assets/js-core/jquery-ui-position.js"></script> -->
+    <!--<script type="text/javascript" src="../../assets/js-core/transition.js"></script>-->
+    <!-- <script type="text/javascript" src="../../assets/js-core/modernizr.js"></script>
+    <script type="text/javascript" src="../../assets/js-core/jquery-cookie.js"></script> -->
+
+
+    <!-- <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script> -->
+    <!-- JS Core -->
+    <script type="text/javascript" src="../../assets/js-core/jquery-core.js"></script>
+    <script type="text/javascript" src="../../assets/tether/js/tether.js"></script>
+    <script type="text/javascript" src="../../assets/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/modal/modal.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/tooltip/tooltip.css">
+    <script>if (window.module) module = window.module;</script>
+    <script>
+        var DisableForegroundingFromMainForDebugging = false;
+        // window.addEventListener('message', function (event) {
+        //     console.log('msg recd');
+        //     if (event.data.msg == "startproctor") {
+        //         var data = event.data;
+        //         console.log("Username: " + data.username);
+        //     }
+
+        //     //Send a msg back to the child frame:
+        //     var frame = document.getElementById('iframe_id');
+        //     frame.contentWindow.postMessage('hi', '*');
+        // }, false);
+        var GlobalId;
+        var GlobalstudentWebGuid;
+        var GlobalIsRemoteProctoringExamStarted = false;
+
+        var GlobalIsSoftwareReadyToClose = false; //So we know when to automatically shut the assessment
+
+        // var GlobalExamTitle;
+        // var GlobalExamDetails;
+        // var GlobalUniversityCode;
+        // var GlobalBatch;
+        // var GlobalCourse;
+        // var GlobalTerm;
+        // var GlobalSubject;
+        // var GlobalExamName;
+        // var GlobalEnrolmentNumber;
+        // var GlobalName;
+        // var GlobalStudentId;
+        // var GlobalAttemptNumber;
+        //EnrolmentNumber, Name, StudentId, AttemptNumber
+
+        var GlobalActivationKey;
+        var GlobalRegistrationNo;
+        var GlobalStudentName;
+        var GlobalEmailId;
+        var GlobalSubjectName;
+        var GlobalProctorLogin;
+
+        var faceDetecetionFailedFlags = 0;
+        var noOfFacesDetectedMorethan1Flags = 0;
+        var faceRecognitionFailedFlags = 0;
+
+        var noOfMoreThan1PersonFlags = 0;
+        var noOfbookOrCellPhoneFlags = 0;
+
+        var voiceDetectedFlags = 0;
+        var noOfWindowsKeyPressedFlags = 0;
+        var noOfWebcamDisconnectedFlags = 0;
+        var noOfMicrophoneDisconnectedFlags = 0;
+
+        var TakeInitialStudentImageIncrementCounter = 0;
+        var TakeInitialStudentVideoIncrementCounter = 0;
+        var TakeInitialStudentDesktopIncrementCounter = 0;
+
+        var RendererJsRemoteProctoring;
+
+        function DummyStartExam() {
+            try {
+
+                var txtExamTitle = $('#txtExamTitle').val();
+                var txtExamDetails = $('#txtExamDetails').val();
+                var txtEnrolmentNumber = $('#txtEnrolmentNumber').val();
+                var txtName = $('#txtName').val();
+                var txtStudentId = $('#txtStudentId').val();
+                var txtAttemptNumber = $('#txtAttemptNumber').val();
+
+                var ExamTitle = txtExamTitle
+
+                var ExamDetails = txtExamDetails;
+                var ExamDetailsArray = ExamDetails.split(':');
+                if (ExamDetailsArray.length === 6) {
+                    console.log('ExamDetailsArray length is perfect (6)');
+                }
+                else {
+                    console.log('ExamDetailsArray length is unexpected: ' + ExamDetailsArray.length);
+                }
+
+                var EnrolmentNumber = txtEnrolmentNumber;
+                var Name = txtName;
+                var StudentId = txtStudentId;
+                var AttemptNumber = txtAttemptNumber;
+
+                if (GlobalIsRemoteProctoringExamStarted === false) {
+                    StartExam(ExamTitle, ExamDetails, EnrolmentNumber, Name, StudentId, AttemptNumber);
+
+                    $('.DummyFieldClass').prop('disabled', true);
+                    $('#btnStartDummyExam').css('display', 'none');
+                    $('#btnStopDummyExam').css('display', 'block');
+
+                    swal("Proctoring features enabled", "", "success").then(function () {
+
+                    });
+                }
+                else {
+                    console.log('Oops, the exam had already started - EndExam.');
+                }
+            }
+            catch (e) {
+                alert('Error in start event');
+                swal("Error in start event. Data passed in event:", "", "error").then(function () {
+
+                });
+            }
+        }
+        function DummyEndExam() {
+            try {
+                var txtEnrolmentNumber = $('#txtEnrolmentNumber').val();
+                var txtStudentId = $('#txtStudentId').val();
+
+                var EnrolmentNumber = txtEnrolmentNumber;
+                var StudentId = txtStudentId;
+
+                EndExam(EnrolmentNumber, StudentId);
+
+                $('.DummyFieldClass').prop('disabled', false);
+                $('#btnStartDummyExam').css('display', 'block');
+                $('#btnStopDummyExam').css('display', 'none');
+
+                swal("Proctoring features disabled", "", "success").then(function () {
+
+                });
+            }
+            catch (e) {
+                alert('Error in stop event');
+                swal("Error in stop event. Data passed in event:", "", "error").then(function () {
+
+                });
+            }
+        }
+
+        function StartExam(ActivationKey, RegistrationNo, StudentName, EmailId, SubjectName, ProctorLogin) {
+            $.ajax(
+                {
+                    url: AssessmentConfig.StartExamLogin,
+                    type: "POST",
+                    data: { ActivationKey: ActivationKey, RegistrationNo: RegistrationNo, StudentName: StudentName, EmailId: EmailId, SubjectName: SubjectName, ProctorLogin: ProctorLogin },
+                    success: function (result) {
+                        //console.log(result);
+                        if (result.IsError === false) {
+                            faceDetecetionFailedFlags = 0
+                            noOfFacesDetectedMorethan1Flags = 0;
+                            faceRecognitionFailedFlags = 0;
+                            noOfMoreThan1PersonFlags = 0;
+                            noOfbookOrCellPhoneFlags = 0;
+                            voiceDetectedFlags = 0;
+                            noOfWindowsKeyPressedFlags = 0;
+                            noOfWebcamDisconnectedFlags = 0;
+                            noOfMicrophoneDisconnectedFlags = 0;
+
+                            TakeInitialStudentImageIncrementCounter = 0;
+                            TakeInitialStudentVideoIncrementCounter = 0;
+                            TakeInitialStudentDesktopIncrementCounter = 0;
+
+                            GlobalId = result.Id;
+                            GlobalstudentWebGuid = result.StudentGuid;
+                            GlobalIsRemoteProctoringExamStarted = true;
+
+
+                            GlobalActivationKey = ActivationKey;
+                            GlobalRegistrationNo = RegistrationNo;
+                            GlobalStudentName = StudentName;
+                            GlobalEmailId = EmailId;
+                            GlobalSubjectName = SubjectName;
+                            GlobalProctorLogin = ProctorLogin;
+
+                            RendererJsRemoteProctoring.StartRendererJsRemoteProctoring();
+
+                            //to shut the software after a while
+                            setTimeout(function () {
+                                try {
+                                    EndExam();
+                                }
+                                catch (e) {
+                                    console.log('Error in force shutting the software after a duration')
+                                }
+                                setInterval(function () {
+                                    ipcRenderer.send('close:application', true);
+                                }, 5000);
+                            }, (1000 * 60 * 60 * 2)); //After 3 hours close the exam on its own
+
+                            //$('#btnCloseExam').css('display', 'none');
+                        }
+                        else {
+                            // swal("Error", result.ErrorMsg, "error").then(function () {
+
+                            // });
+                            console.error('Error in trying to call the start exam api');
+                        }
+                    },
+                    error: function (data) {
+                        // swal("Unable to connect", 'Oops, unable to connect to remote proctoring server for starting proctoring. This is probably an issue with your internet connection. Kindly restart the application to try again', "error").then(function () {
+
+                        // });
+                        console.error('Error in trying to call the start exam api. Probably an internet issue.');
+                    }
+                });
+        }
+        function EndExam() {
+            if (GlobalIsRemoteProctoringExamStarted === false) {
+                setInterval(function () {
+                    ipcRenderer.send('close:application', true);
+                }, 2000);
+            }
+            else {
+                $.ajax(
+                    {
+                        url: AssessmentConfig.EndExam,
+                        type: "POST",
+                        data: { Id: GlobalId },
+                        success: function (result) {
+                            //console.log(result);
+                            if (result.IsError === false) {
+                                faceDetecetionFailedFlags = 0
+                                noOfFacesDetectedMorethan1Flags = 0;
+                                faceRecognitionFailedFlags = 0;
+                                noOfMoreThan1PersonFlags = 0;
+                                noOfbookOrCellPhoneFlags = 0;
+                                voiceDetectedFlags = 0;
+
+                                TakeInitialStudentImageIncrementCounter = 0;
+                                TakeInitialStudentVideoIncrementCounter = 0;
+                                TakeInitialStudentDesktopIncrementCounter = 0;
+
+                                GlobalId = null
+                                GlobalstudentWebGuid = null
+                                GlobalIsRemoteProctoringExamStarted = false;
+
+                                GlobalActivationKey = null;
+                                GlobalRegistrationNo = null;
+                                GlobalStudentName = null;
+                                GlobalEmailId = null;
+                                GlobalSubjectName = null;
+                                GlobalProctorLogin = null;
+
+                                RendererJsRemoteProctoring.StopWebRTCRemoteProctoring();
+
+                                $('#btnCloseExam').css('display', 'block');
+                            }
+                            else {
+                                // swal("Error", result.ErrorMsg, "error").then(function () {
+
+                                // });
+                                console.error('Error in calling the end api. Closing softare all the same.');
+                                setInterval(function () {
+                                    ipcRenderer.send('close:application', true);
+                                }, 2000);
+                            }
+                        },
+                        error: function (data) {
+                            // swal("Unable to connect", 'Oops, unable to connect to remote proctoring server for ending proctoring. This is probably an issue with your internet connection. Kindly restart the application to try again', "error").then(function () {
+
+                            // });
+                            console.error('Error in calling the end api. Probably an issue with the internet.');
+                        }
+                    });
+            }
+        }
+        window.addEventListener('message', function (event) {
+            console.log('msg recd in SchoolGuru parent');
+            if (event.data.msg == "start" || event.data.Action == "start") {
+                var data = event.data;
+
+                try {
+                    var ActivationKey = data.ActivationKey;
+                    var RegistrationNo = data.RegistrationNo;
+                    var StudentName = data.StudentName;
+                    var EmailId = data.EmailId;
+                    var SubjectName = data.SubjectName;
+                    var ProctorLogin = data.ProctorLogin;
+
+
+                    if (GlobalIsRemoteProctoringExamStarted === false) {
+                        StartExam(ActivationKey, RegistrationNo, StudentName, EmailId, SubjectName, ProctorLogin);
+                    }
+                    else {
+                        console.log('Oops, the exam had already started - event.data.msg == "start"');
+                    }
+                }
+                catch (e) {
+                    //alert('Error in start event');
+                    swal("Error in start event. Data passed in event:", JSON.stringify(data, null, 2), "error").then(function () {
+
+                    });
+                }
+            }
+            else if (event.data.msg == "stop" || event.data.Action == "stop") {
+                try {
+                    EndExam();
+                }
+                catch (e) {
+                    //alert('Error in stop event');
+                    swal("Error in stop event. Data passed in event:", JSON.stringify(data, null, 2), "error").then(function () {
+
+                    });
+                }
+            }
+
+            //Send a msg back to the child frame:
+            // var frame = document.getElementById('iframe_id');
+            // frame.contentWindow.postMessage('hi', '*');
+        }, false);
+        $(document).ready(function () {
+            require('../../../Renderer/renderer-Login.js');
+            RendererJsRemoteProctoring = require('../../../renderer.js');
+
+            //Dummy fields:
+            $('#btnStartDummyExam').click(function () {
+                $('.DummyFieldClass').each(function () {
+                    if ($(this).val().trim() === '') {
+                        swal("Enter all fields", 'Please provide all dummy field values.', "error").then(function () {
+                            return false;
+                        });
+                    }
+                });
+                DummyStartExam();
+            });
+            $('#btnStopDummyExam').click(function () {
+                DummyEndExam();
+            });
+        });
+
+    </script>
+</head>
+
+<body style="margin:0px;padding:0px;overflow:hidden">
+    <div style="position: absolute; top:0px; left: 0px; zoom: 0.44">
+        <video id="videoFaceDetect" width="320" height="240" autoplay muted
+            style="position: absolute; left:0; top:0; width: 320px; height:240px;"></video>
+        <canvas id="canvasObjectDetection" width="320" height="240" style="position: absolute; left:0; top:0"></canvas>
+        <canvas id="canvas" width="320" height="240" style="position: absolute; left:0; top:0; display:none"></canvas>
+        <canvas id="canvas2" width="320" height="240" style="position: absolute; left:0; top:0"></canvas>
+        <canvas id="canvasTFFaceDetect" width="320" height="240" style="position: absolute; left:0; top:0"></canvas>
+        <video id="videoProctor" width="320" height="240" autoplay style="position: absolute; left: 400px"></video>
+        <video id="FaceRecognitionVideo" autoplay muted style="display:none"></video>
+    </div>
+    <div class="form-group" style="position:absolute; top:10px;right:10px;">
+        <div class="input-group">
+            <button id="btnCloseExam" type="button" class="btn btn-border btn-alt border-red btn-link font-red">
+                <i class="glyph-icon icon-exclamation" title="" data-original-title=".icon-arrow-left"></i>&nbsp; Close
+                Exam Software</button>
+        </div>
+    </div>
+    <div class="form-group" style="position:absolute; top:500px;right:10px;display:none">
+        <div class="input-group">
+            <span class="input-group-addon addon-inside bg-gray">
+                <i class="glyph-icon icon-mortar-board"></i>
+            </span>
+            <input class="form-control DummyFieldClass" id="txtExamTitle" placeholder="Exam Title" maxlength="100"
+                value="10th STD Math">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon addon-inside bg-gray">
+                <i class="glyph-icon icon-mortar-board"></i>
+            </span>
+            <input class="form-control DummyFieldClass" id="txtExamDetails" placeholder="Exam Details" maxlength="100"
+                value="ANU : July 2019 3 Years : BCom : Year 1 : Financial Accounting : Sep 2019">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon addon-inside bg-gray">
+                <i class="glyph-icon icon-mortar-board"></i>
+            </span>
+            <input class="form-control DummyFieldClass" id="txtEnrolmentNumber" placeholder="Enrolment Number"
+                maxlength="100" value="122343">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon addon-inside bg-gray">
+                <i class="glyph-icon icon-mortar-board"></i>
+            </span>
+            <input class="form-control DummyFieldClass" id="txtName" placeholder="Name" maxlength="100"
+                value="Neville Katila">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon addon-inside bg-gray">
+                <i class="glyph-icon icon-mortar-board"></i>
+            </span>
+            <input class="form-control DummyFieldClass" id="txtStudentId" placeholder="Student Id" maxlength="100"
+                value="5567">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon addon-inside bg-gray">
+                <i class="glyph-icon icon-mortar-board"></i>
+            </span>
+            <input class="form-control DummyFieldClass" id="txtAttemptNumber" placeholder="AttemptNumber"
+                maxlength="100" type="number" value="1" min="1">
+        </div>
+        <div class="input-group">
+            <button id="btnStartDummyExam" type="button" class="btn btn-primary btn-block">
+                Start Dummy Exam</button>
+        </div>
+        <div class="input-group">
+            <button id="btnStopDummyExam" type="button" class="btn btn-danger btn-block" style="display:none">
+                End Dummy Exam</button>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal" id="CheatingAlertModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Warning!</h4>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal" id="EndExamModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Are you sure you want to end this exam?</h4>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnEndExamConfirmed" type="button"
+                        class="btn btn-border btn-alt border-red btn-link font-red" data-dismiss="modal">Yes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal" id="internetConnectionError" role="dialog" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Unable to connect to the internet!</h4>
+                </div>
+                <div class="modal-body" style="text-align: left; font-weight: bold">
+                    You are unable to connect to the internet. Kindly close the exam software and re-start once
+                    internet
+                    connection is established.
+                </div>
+                <div class="modal-footer">
+                    <button id="btnCloseExamSoftwareNoInternet" type="button"
+                        class="btn btn-border btn-alt border-red btn-link font-red" data-dismiss="modal">Close
+                        software</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="webcamCaptureError" role="dialog" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Unable to detect web camera!</h4>
+                </div>
+                <div class="modal-body" style="text-align: left; font-weight: bold">
+                    Kindly follow the following instructions:
+                    <br />
+                    <br />1. Ensure that your web camera is connected and functional.
+                    <br />2. Ensure that no other software on this computer is accessing the web camera.
+                    <br />Close the exam software and try again.
+                </div>
+                <div class="modal-footer">
+                    <button id="btnCloseExamSoftwareWebcamCaptureError" type="button"
+                        class="btn btn-border btn-alt border-red btn-link font-red" data-dismiss="modal">Close
+                        software</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="audioCaptureError" role="dialog" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Unable to detect microphone audio!</h4>
+                </div>
+                <div class="modal-body" style="text-align: left; font-weight: bold">
+                    Kindly follow the following instructions:
+                    <br />
+                    <br />1. Ensure that your microphone is correctly intalled (this is usually in-built with your
+                    computer).
+                    <br />2. Close the exam software and try again.
+                </div>
+                <div class="modal-footer">
+                    <button id="btnCloseExamSoftwareAudioError" type="button"
+                        class="btn btn-border btn-alt border-red btn-link font-red" data-dismiss="modal">Close
+                        software</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="QuitExamSoftwareModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Are you sure you want to close the exam software?</h4>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnCloseExamSoftwareConfirmed" type="button"
+                        class="btn btn-border btn-alt border-red btn-link font-red" data-dismiss="modal">Yes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="selectLMSLinkModal" role="dialog" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">Select LMS Server:</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body" style="text-align: left; font-weight: bold">
+                    <div style="padding-top: 10px; padding-bottom: 10px">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <select id="ddlAssessmentServerList" class="form-control" style="height:auto">
+                                        <option selected="selected" value="Select">
+                                            Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button id="btnSelectLMSServer" type="button"
+                                    class="btn btn-block btn-lg btn-primary waves-effect waves-light"
+                                    style="margin-top: 25px">Select LMS Server</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="CloseSoftwareError" role="dialog" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Blacklisted software detected!</h4>
+                </div>
+                <div class="modal-body" style="text-align: left; font-weight: bold">
+                    Kindly close the following application(s) to continue:
+                    <br />
+                    <br />
+                    <div id="ListBlacklistedRunningSoftwaresDiv">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnCloseExamSoftware" type="button"
+                        class="btn btn-border btn-alt border-red btn-link font-red" data-dismiss="modal">Close
+                        software</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="MultipleScreenDetectedErrorModal" role="dialog" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Multiple Screens Detected!</h4>
+                </div>
+                <div class="modal-body" style="text-align: left; font-weight: bold">
+
+                    <br />Multiple screens have been detected. Please disconnect the additional screen to continue.
+
+                </div>
+                <div class="modal-footer">
+                    <button id="btnMultipleScreenDetectedCloseSoftware" type="button"
+                        class="btn btn-border btn-alt border-red btn-link font-red" data-dismiss="modal">Close
+                        software</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="OutdatedDesktopAppVersionErrorModal" role="dialog" data-keyboard="false"
+        data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Old desktop app in use!</h4>
+                </div>
+                <div class="modal-body" style="text-align: left; font-weight: bold">
+
+                    <br />Please re-download the latest version of Symbiosis AI Assessment.
+                    <br />
+                    <br />
+                    <span id="spnDownloadDesktopAppLink"></span>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnOutdatedDesktopAppVersionCloseSoftware" type="button"
+                        class="btn btn-border btn-alt border-red btn-link font-red" data-dismiss="modal">Close
+                        software</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <iframe id="iframe_id" src="https://stageoas.scdl.net/AssessmentServer/renderingEngine/Main.html" allow="microphone"
+        frameborder="0" style="overflow:hidden;height:100%;width:100%; margin-top: 100px" height="100%"
+        width="100%"></iframe> -->
+    <iframe id="iframe_id" src="login.html" allow="microphone" frameborder="0"
+        style="overflow:hidden;height:100%;width:100%; margin-top: 100px" height="100%" width="100%"></iframe>
+    <div id="loading" style="display: none;">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+        <div style="text-align: center; margin-top:50px; padding: 50px">
+            <div style="display:none" class="progressbar" data-value="100">
+                <div class="progressbar-value bg-primary">
+                    <div class="progress-overlay"></div>
+                    <!-- <div class="progress-label">62%</div> -->
+                </div>
+            </div>
+            <span>Uploading exam... please wait</span>
+            <br />
+            <br>
+            <span id="spnPercentUploaded"></span>
+        </div>
+    </div>
+
+    <script>
+        $('iframe').css('height', (screen.height - 100));
+    </script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script> -->
+    <script src="../../../includes/js/firebase-app.js" type="text/javascript"></script>
+    <script src="../../../includes/js/firebase-database.js" type="text/javascript"></script>
+
+    <script src="../../../includes/js/FaceDetection/tracking.js" type="text/javascript"></script>
+    <script src="../../../includes/js/FaceDetection/face-min.js" type="text/javascript"></script>
+    <script src="../../../includes/js/FaceDetection/CVV/cvv.js" type="text/javascript"></script>
+    <script src="../../../includes/js/FaceDetection/CVV/face.js" type="text/javascript"></script>
+
+    <script src="../../../includes/js/mediastreamrecorder.js" type="text/javascript"></script>
+
+    <script src="../../assets/widgets/sweet-alert/sweetalert2.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../../includes/js/jquery-toast/jquery.toast.min.css">
+    <script src="../../../includes/js/jquery-toast/jquery.toast.min.js" type="text/javascript"></script>
+    <script src="../../../includes/js/jquery-toast/toastr.init.js" type="text/javascript"></script>
+    <script src="../../../includes/js/hark.js" type="text/javascript"></script>
+    <script>
+        const AssessmentConfig = require('../../../assessment-config.json');
+        function LoadLMSLinksAjax() {
+            $.ajax(
+                {
+                    url: AssessmentConfig.GetActiveLMSLinks,
+                    type: "GET",
+                    success: function (result) {
+                        //console.log(result);
+                        if (result.isError === false) {
+                            result.data.forEach(function (item) {
+                                $("#ddlAssessmentServerList").append(new Option(item.LinkName, item.LinkUrl));
+                            });
+                            $('#selectLMSLinkModal').modal();
+                        }
+                        else {
+                            swal("Oops, something went wrong", 'There was an unexpected error in attempting to fetch active LMS server details. Error: ' + result.errorMsg, "error").then(function () {
+
+                            });
+                        }
+                    },
+                    error: function (data) {
+                        swal("Unable to connect", 'Oops, unable to fetch LMS server links. This is probably an issue with your internet connection. Kindly restart the application to try again', "error").then(function () {
+
+                        });
+                    }
+                });
+        }
+        $(document).ready(function () {
+            // $('#btnSelectLMSServer').click(function () {
+            //     var SelectedLMSLinkValue = $('#ddlAssessmentServerList').val();
+            //     if (SelectedLMSLinkValue === 'Select') {
+            //         swal("Select an LMS server", 'Please select an LMS server to proceed.', "error").then(function () {
+            //             return false;
+            //         });
+
+            //     }
+            //     else {
+            //         $('#selectLMSLinkModal').modal('hide');
+            //         document.getElementById('iframe_id').src = SelectedLMSLinkValue;
+
+            //     }
+            // });
+        });
+    </script>
+
+    <script>
+        var setTimeoutFaceDetection; //global variable also used in renderer-FaceDetectionRecognition.js
+        var formDataWebCamError = []; //global To retry sending failed web cam recordings used in renderer.js and renderer-Exam.js used for Desktop recordings currently
+        let isExamEnded = false; //Global used in used in renderer.js and renderer-Exam.js
+
+        function StartTrackingJsFaceDetection() {
+            var canvas2 = document.getElementById('canvas2');
+            var context2 = canvas2.getContext('2d');
+
+            var tracker = new tracking.ObjectTracker('face');
+            tracker.setInitialScale(4);
+            tracker.setStepSize(2);
+            tracker.setEdgesDensity(0.1);
+
+            tracking.track('#videoFaceDetect', tracker, { camera: true });
+
+
+            tracker.on('track', function (event) {
+                context2.clearRect(0, 0, canvas2.width, canvas2.height);
+                if (GlobalIsRemoteProctoringExamStarted === true) {
+                    if (event.data.length === 0) {
+                        //Do nothing, this is handled in renderer-FaceDetectionRecognition.js
+                    }
+                    else { //If a face is detected, reset the global variables for face detection
+                        // counterDetectNoFace = 0;
+                        clearTimeout(setTimeoutFaceDetection);
+                        setTimeoutFaceDetection = undefined;
+                    }
+                }
+                event.data.forEach(function (rect) {
+                    context2.strokeStyle = '#a64ceb';
+                    context2.strokeRect(rect.x, rect.y, rect.width, rect.height);
+                    context2.font = '11px Helvetica';
+                    context2.fillStyle = "#fff";
+                    // context2.fillText('x: ' + rect.x + 'px', rect.x + rect.width + 5, rect.y + 11);
+                    // context2.fillText('y: ' + rect.y + 'px', rect.x + rect.width + 5, rect.y + 22);
+                });
+            });
+        }
+        // StartTrackingJsFaceDetection();
+        // require('../../../Renderer/renderer-Login.js');
+        // require('../../../renderer.js');
+    </script>
+    <script>
+        if (typeof (w) == "undefined") {
+            w = new Worker("worker.js");
+        }
+    </script>
+    <!-- <script src="../../../includes/js/Tensorflowjs/tfjs.js"> </script> -->
+    <!-- Load the coco-ssd model. -->
+    <!-- <script src="../../../includes/js/Tensorflowjs/coco-sdd.js"> </script> -->
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script> -->
+    <script>
+        if (typeof (workertfjsfacedetect) == "undefined") {
+            workertfjsfacedetect = new Worker("worker-tfjs-facedetect.js");
+        }
+    </script>
+    <script>
+
+        // var loader = '<div id="loader-overlay" class="ui-front loader ui-widget-overlay ' + 'bg-default' + ' opacity-' + '60' + '"><img src="../../assets/images/spinner/loader-' + 'dark' + '.gif" alt="" /></div>';
+        var loader = '<div id="loader-overlay" style="margin-top:200px" class="ui-front ui-widget-overlay ' + 'bg-default' + ' opacity-' + '60' + '"><div class="loading-stick" style="width:auto"><div class="stick bg-danger"></div><div class="stick bg-danger"></div><div class="stick bg-danger"></div><div class="stick bg-danger"></div><div class="stick bg-danger"></div><h2 id="h1LoadingStatus" style="margin-top:15px">Loading... Please wait...</h2></div></div>';
+        $('body').append(loader);
+        $('#loader-overlay').fadeIn('fast');
+        $('.loader').css('display', 'block');
+        var CounterMoreThanOnePersonFrequency = 0;
+
+        this.video = document.getElementById("videoFaceDetect");
+
+
+        // var DateTimeBookCellPhoneFailed = new Date();
+        // function RateLimiterDoBookCellPhoneDetectionFailed() {
+        //     var TimeToWaitInSeconds = 5;
+        //     var endTime = new Date();
+        //     var timeDiff = endTime - DateTimeBookCellPhoneFailed; //in ms
+        //     // strip the ms
+        //     timeDiff /= 1000;
+        //     // get seconds 
+        //     var secondsElapsed = Math.round(timeDiff);
+        //     if (secondsElapsed >= TimeToWaitInSeconds) {
+        //         //console.log("RateLimiterDoMobileFaceDetectionFailed returning true as secondsElapsed = " + secondsElapsed);
+        //         DateTimeBookCellPhoneFailed = new Date();
+        //         return true;
+        //     }
+        //     else {
+        //         return false;
+        //     }
+
+        // }
+        // var IsStopwatchForBookCellPhoneDetectionRunning = false;
+        // function StartStopWatchForBookCellPhoneDetectionFailed() {
+        //     if (IsStopwatchForBookCellPhoneDetectionRunning === false) {
+        //         IsStopwatchForBookCellPhoneDetectionRunning = true;
+        //         DateTimeBookCellPhoneFailed = new Date();
+        //     }
+        // }
+        // function StopStopWatchForBookCellPhoneDetectionFailed() {
+        //     IsStopwatchForBookCellPhoneDetectionRunning = false;
+        // }
+
+
+        function renderPredictions(predictions) {
+            var noOfPersonsDetected = 0;
+            //var video = document.getElementById("videoFaceDetect");
+
+            const canvas = document.getElementById("canvasObjectDetection");
+
+            const ctx = canvas.getContext("2d");
+            // canvas.width = video.width;
+            // canvas.height = video.height;
+            ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+            // Fonts
+            const font = "12px sans-serif";
+            ctx.font = font;
+            ctx.textBaseline = "top";
+            //ctx.drawImage(this.video, 0, 0, video.width, video.height);
+            predictions.forEach(prediction => {
+                const x = prediction.bbox[0];
+                const y = prediction.bbox[1];
+                const width = prediction.bbox[2];
+                const height = prediction.bbox[3];
+                // Bounding box
+                ctx.strokeStyle = "#FF9933";
+                ctx.lineWidth = 1;
+                ctx.strokeRect(x, y, width, height);
+                // Label background
+                // ctx.fillStyle = "#00FFFF";
+                // const textWidth = ctx.measureText(prediction.class).width;
+                // const textHeight = parseInt(font, 10); // base 10
+                //ctx.fillRect(x, y, textWidth + 4, textHeight + 4);
+            });
+            predictions.forEach(prediction => {
+                const x = prediction.bbox[0];
+                const y = prediction.bbox[1];
+                ctx.fillStyle = "#000000";
+                ctx.fillText(prediction.class, x, y);
+                if (GlobalIsRemoteProctoringExamStarted === true) {
+                    if (prediction.class === 'person') {
+                        noOfPersonsDetected++;
+
+                        if (noOfPersonsDetected > 1 && CounterMoreThanOnePersonFrequency === 5 && prediction.score > 0.65) {
+                            CounterMoreThanOnePersonFrequency = 0;
+                            RendererJsRemoteProctoring.FlagMoreThan1PersonDetectedTensorflowJs();
+                            // $("#CheatingAlertModal p").text('More than 1 person detected. This will be considered as cheating!');
+                            // $("#CheatingAlertModal").modal();
+                            $.NotificationApp.send("More than 1 person detected!", "More than 1 person detected. This will be considered as cheating!",
+                    'top-right', '#3b98b5', 'error', 5000, 1, 'plain');
+                        }
+                        else if (noOfPersonsDetected > 1) {
+                            CounterMoreThanOnePersonFrequency++;
+                        }
+                    }
+                    else if (prediction.class === 'book' || prediction.class === 'cell phone') {
+                        if (prediction.score > 0.65) {
+                            RendererJsRemoteProctoring.FlagBookCellPhoneDetectedTensorflowJs();
+                            // $("#CheatingAlertModal p").text('A ' + prediction.class + ' has been detected. This will be considered as cheating!');
+                            // $("#CheatingAlertModal").modal();
+                            $.NotificationApp.send(prediction.class + " detected!", 'A ' + prediction.class + ' has been detected. This will be considered as cheating!',
+                    'top-right', '#3b98b5', 'error', 5000, 1, 'plain');
+                        }
+                    }
+                }
+
+            });
+        };
+
+
+        navigator.mediaDevices
+            .getUserMedia({
+                audio: true,//Used bu hark.js for audio detection
+                video: { facingMode: "user" }
+            })
+            .then(stream => {
+                this.video.srcObject = stream;
+                window.globalVideoStream = stream; //Global used in renderer.js
+
+                //cocoSsd.load().then(model => {
+                $('#h1LoadingStatus').text('Loading... 70% complete...');
+
+
+                //detectFrame(video, model);
+
+                var offscreenCanvas = new OffscreenCanvas(video.width, video.height);
+                w.postMessage({
+                    //"data": myImageData,
+                    "width": video.width,
+                    "height": video.height,
+                    "canvas": offscreenCanvas
+                }, [offscreenCanvas]);
+
+
+                //const ctx = offscreenCanvas.getContext("2d");
+
+                setInterval(function () {
+
+                    let width = video.width;
+                    let height = video.height;
+
+                    // let canvasTemp = document.createElement('canvas');
+                    // let contextTemp = canvasTemp.getContext('2d');
+                    // canvasTemp.width = width;
+                    // canvasTemp.height = height;
+                    // contextTemp.drawImage(video, 0, 0, width, height);
+                    // var imageBase64 = canvasTemp.toDataURL();
+
+
+
+                    // ctx.drawImage(this.video, 0, 0, video.width, video.height);
+                    // var myImageData = ctx.getImageData(0, 0, video.width, video.height).data;
+
+                    //ctx.drawImage(this.video, 0, 0, video.width, video.height);
+                    //var myImageData = ctx.getImageData(0, 0, video.width, video.height).data;
+                    //send data to worker
+                    //var image = new Image();
+
+                    var offscreen = new OffscreenCanvas(width, height);
+                    offscreen.width = width;
+                    offscreen.height = height;
+                    var ctxOffscr = offscreen.getContext("2d");
+                    ctxOffscr.drawImage(video, 0, 0, width, height);
+                    var bitmap = offscreen.transferToImageBitmap();
+
+                    w.postMessage({
+                        //"data": myImageData,
+                        "width": video.width,
+                        "height": video.height,
+                        //"imageBase64": imageBase64,
+                        //"image": image
+                        "bitmap": bitmap
+                    }, [bitmap]);
+                    w.onmessage = function (event) {
+                        var predictionsStringified = event.data;
+                        var predictions = JSON.parse(predictionsStringified);
+                        requestAnimationFrame(() => {
+                            renderPredictions(predictions);
+                        });
+                    };
+
+                }, 250);
+
+
+
+                $('#h1LoadingStatus').text('Loading... 80% complete...');
+                //DoFaceDetection();
+                StartTrackingJsFaceDetection();
+                $('#h1LoadingStatus').text('Loading... 90% complete...');
+
+                //LoadLMSLinksAjax();
+                $('#h1LoadingStatus').text('Loading... 100% complete...');
+                //if ($('#loader-overlay').length) {
+                $('#loader-overlay').fadeOut('fast');
+                //$('#loader-overlay').remove();
+                //}
+                $('.loader').css('display', 'none');
+
+                //});
+
+                //New Tensorflow face detection:
+                // var canvasTFFaceDetect = document.getElementById('canvasTFFaceDetect');
+                // canvasTFFaceDetect.width = video.width;
+                // canvasTFFaceDetect.height = video.height;
+                // var ctxCanvasTFFaceDetect = canvasTFFaceDetect.getContext("2d");
+                // ctxCanvasTFFaceDetect.fillStyle = "rgba(255, 0, 0, 0.5)";
+                // async function RenderTFFaceDetection() {
+                //     // Load the model.
+                //     const model = await blazeface.load();
+
+                //     // Pass in an image or video to the model. The model returns an array of
+                //     // bounding boxes, probabilities, and landmarks, one for each detected face.
+
+                //     const returnTensors = false;
+                //     const flipHorizontal = false;
+                //     const annotateBoxes = true;
+
+                //     var tempcanv = document.createElement('canvas');
+                //     tempcanv.width = video.width;
+                //     tempcanv.height = video.height;
+                //     var tempctxCanvasTFFaceDetect = tempcanv.getContext("2d");
+                //     tempctxCanvasTFFaceDetect.drawImage(video, 0, 0, video.width, video.height);
+
+
+                //     const predictions = await model.estimateFaces(tempcanv, returnTensors, flipHorizontal, annotateBoxes);
+                //     //ctxCanvasTFFaceDetect.drawImage(video, 0, 0, video.width, video.height);
+                //     if (predictions.length > 0) {
+                //         ctxCanvasTFFaceDetect.clearRect(0, 0, canvas.width, canvas.height);
+                //         /*
+                //         `predictions` is an array of objects describing each detected face, for example:
+
+                //         [
+                //           {
+                //             topLeft: [232.28, 145.26],
+                //             bottomRight: [449.75, 308.36],
+                //             probability: [0.998],
+                //             landmarks: [
+                //                 x, y
+                //               [295.13, 177.64], // right eye
+                //               [382.32, 175.56], // left eye
+                //               [341.18, 205.03], // nose
+                //               [345.12, 250.61], // mouth
+                //               [252.76, 211.37], // right ear
+                //               [431.20, 204.93] // left ear
+                //             ]
+                //           }
+                //         ]
+                //         */
+                //         var landmarks = predictions[0].landmarks;
+                //         var RightEyeX = landmarks[0][0];
+                //         var LeftEyeX = landmarks[1][0];
+
+                //         var RightEarX = landmarks[4][0];
+                //         var LeftEarX = landmarks[5][0];
+
+                //         var NoseY = landmarks[2][1];
+                //         var RightEarY = landmarks[4][1];
+
+                //         var RightEyeY = landmarks[0][1];
+
+                //         if (RightEyeX <= RightEarX) {
+                //             $.NotificationApp.send("Look into the screen", "Look straight into the screen. Your are currently looking at an object on your right.",
+                //                 'top-right', '#3b98b5', 'error', 5000, 1, 'plain');
+                //         }
+                //         if (LeftEarX <= LeftEyeX) {
+                //             $.NotificationApp.send("Look into the screen", "Look straight into the screen. Your are currently looking at an object on your left.",
+                //                 'top-right', '#3b98b5', 'error', 5000, 1, 'plain');
+                //         }
+                //         if ((NoseY - 5) <= RightEarY) { // - 5 to make it more strict
+                //             $.NotificationApp.send("Look into the screen", "Look straight into the screen. Your are currently looking at an object above the screen.",
+                //                 'top-right', '#3b98b5', 'error', 5000, 1, 'plain');
+                //         }
+                //         if (RightEyeY >= (RightEarY + 4)) {//+4 to make it more lenient
+                //             $.NotificationApp.send("Look into the screen", "Look straight into the screen. Your are currently looking at an object below the screen.",
+                //                 'top-right', '#3b98b5', 'error', 5000, 1, 'plain');
+                //         }
+
+                //         setTimeout(function () {
+                //             console.log('RightEyeX: ' + RightEyeX);
+                //             console.log('LeftEyeX: ' + LeftEyeX);
+                //         }, 1000)
+                //         ctxCanvasTFFaceDetect.fillStyle = "white";
+                //         for (let j = 0; j < landmarks.length; j++) {
+                //             const x = landmarks[j][0];
+                //             const y = landmarks[j][1];
+                //             ctxCanvasTFFaceDetect.fillRect(x, y, 2, 2);
+                //         }
+
+
+                //         for (let i = 0; i < predictions.length; i++) {
+                //             const start = predictions[i].topLeft;
+                //             const end = predictions[i].bottomRight;
+                //             const size = [end[0] - start[0], end[1] - start[1]];
+                //             // ctxCanvasTFFaceDetect.fillStyle = "rgba(255, 0, 0, 0.1)";
+                //             ctxCanvasTFFaceDetect.fillStyle = "rgba(0, 230, 64, 0.2)";
+                //             // Render a rectangle over each detected face.
+                //             ctxCanvasTFFaceDetect.fillRect(start[0], start[1], size[0], size[1]);
+                //         }
+                //     }
+                //     else {
+                //         ctxCanvasTFFaceDetect.clearRect(0, 0, canvas.width, canvas.height);
+                //     }
+                //     requestAnimationFrame(RenderTFFaceDetection);
+                // }
+                // video.addEventListener('play', function () {
+                //     RenderTFFaceDetection();
+                // });
+                var DateTimeFaceDetectionFailed = new Date();
+                function RateLimiterDoMobileFaceDetectionFailed() {
+                    var TimeToWaitInSeconds = 10;
+                    var endTime = new Date();
+                    var timeDiff = endTime - DateTimeFaceDetectionFailed; //in ms
+                    // strip the ms
+                    timeDiff /= 1000;
+                    // get seconds 
+                    var secondsElapsed = Math.round(timeDiff);
+                    if (secondsElapsed >= TimeToWaitInSeconds) {
+                        //console.log("RateLimiterDoMobileFaceDetectionFailed returning true as secondsElapsed = " + secondsElapsed);
+                        DateTimeFaceDetectionFailed = new Date();
+                        return true;
+                    }
+                    else {
+                        return false;
+                    }
+
+                }
+                var IsStopwatchForFaceDetectionRunning = false;
+                function StartStopWatchForFaceDetectionFailed() {
+                    if (IsStopwatchForFaceDetectionRunning === false) {
+                        IsStopwatchForFaceDetectionRunning = true;
+                        DateTimeFaceDetectionFailed = new Date();
+                    }
+                }
+                function StopStopWatchForFaceDetectionFailed() {
+                    IsStopwatchForFaceDetectionRunning = false;
+                }
+
+                //For 2 face detection:
+                var DateTime2FaceDetected = new Date();
+                function RateLimiter2FaceDetected() {
+                    var TimeToWaitInSeconds = 5;
+                    var endTime = new Date();
+                    var timeDiff = endTime - DateTime2FaceDetected; //in ms
+                    // strip the ms
+                    timeDiff /= 1000;
+                    // get seconds 
+                    var secondsElapsed = Math.round(timeDiff);
+                    if (secondsElapsed >= TimeToWaitInSeconds) {
+                        //console.log("RateLimiterDoMobileFaceDetectionFailed returning true as secondsElapsed = " + secondsElapsed);
+                        DateTime2FaceDetected = new Date();
+                        return true;
+                    }
+                    else {
+                        return false;
+                    }
+
+                }
+                var IsStopwatchFor2FaceDetectedRunning = false;
+                function StartStopWatchFor2FaceDetected() {
+                    if (IsStopwatchFor2FaceDetectedRunning === false) {
+                        IsStopwatchFor2FaceDetectedRunning = true;
+                        DateTime2FaceDetected = new Date();
+                    }
+                }
+                function StopStopWatchFor2FaceDetected() {
+                    IsStopwatchFor2FaceDetectedRunning = false;
+                }
+
+                var canvasTFFaceDetect = document.getElementById('canvasTFFaceDetect');
+                canvasTFFaceDetect.width = video.width;
+                canvasTFFaceDetect.height = video.height;
+                var ctxCanvasTFFaceDetect = canvasTFFaceDetect.getContext("2d");
+                //ctxCanvasTFFaceDetect.fillStyle = "rgba(255, 0, 0, 0.5)";
+
+                var offscreenCanvasTfjsFaceDetect = new OffscreenCanvas(video.width, video.height);
+                workertfjsfacedetect.postMessage({
+                    "width": video.width,
+                    "height": video.height,
+                    "canvas": offscreenCanvasTfjsFaceDetect
+                }, [offscreenCanvasTfjsFaceDetect]);
+
+                function RenderTFFaceDetection() {
+                    var offscreen = new OffscreenCanvas(video.width, video.height);
+                    offscreen.width = video.width;
+                    offscreen.height = video.height;
+                    var ctxOffscr = offscreen.getContext("2d");
+                    ctxOffscr.drawImage(video, 0, 0, video.width, video.height);
+                    var bitmap = offscreen.transferToImageBitmap();
+
+                    workertfjsfacedetect.postMessage({
+                        //"data": myImageData,
+                        "width": video.width,
+                        "height": video.height,
+                        //"imageBase64": imageBase64,
+                        //"image": image
+                        "bitmap": bitmap
+                    }, [bitmap]);
+                    workertfjsfacedetect.onmessage = function (event) {
+                        var predictionsStringified = event.data;
+                        var predictions = JSON.parse(predictionsStringified);
+                        requestAnimationFrame(() => {
+                            ctxCanvasTFFaceDetect.clearRect(0, 0, canvas.width, canvas.height);
+
+                            if (predictions.length == 1) {
+                                ctxCanvasTFFaceDetect.clearRect(0, 0, canvas.width, canvas.height);
+                                /*
+                                `predictions` is an array of objects describing each detected face, for example:
+        
+                                [
+                                  {
+                                    topLeft: [232.28, 145.26],
+                                    bottomRight: [449.75, 308.36],
+                                    probability: [0.998],
+                                    landmarks: [
+                                        x, y
+                                      [295.13, 177.64], // right eye
+                                      [382.32, 175.56], // left eye
+                                      [341.18, 205.03], // nose
+                                      [345.12, 250.61], // mouth
+                                      [252.76, 211.37], // right ear
+                                      [431.20, 204.93] // left ear
+                                    ]
+                                  }
+                                ]
+                                */
+                                var landmarks = predictions[0].landmarks;
+                                var RightEyeX = landmarks[0][0];
+                                var LeftEyeX = landmarks[1][0];
+
+                                var RightEarX = landmarks[4][0];
+                                var LeftEarX = landmarks[5][0];
+
+                                var NoseY = landmarks[2][1];
+                                var RightEarY = landmarks[4][1];
+
+                                var RightEyeY = landmarks[0][1];
+
+                                if (RightEyeX <= RightEarX) {
+                                    if (GlobalIsRemoteProctoringExamStarted) {
+                                        StartStopWatchForFaceDetectionFailed();
+                                        //Step2: Check if the elapsed time has passed, if yes, fire the event:
+                                        if (RateLimiterDoMobileFaceDetectionFailed() === true) {
+                                            //MobileFaceNotDetected();
+                                            $.NotificationApp.send("Look into the screen", "Look straight into the screen. Your are currently looking at an object on your right.",
+                                                'top-right', '#3b98b5', 'error', 5000, 1, 'plain');
+                                            RendererJsRemoteProctoring.FlagNotLookingAtScreen();
+                                        }
+                                    }
+                                }
+                                else if (LeftEarX <= LeftEyeX) {
+                                    if (GlobalIsRemoteProctoringExamStarted) {
+                                        StartStopWatchForFaceDetectionFailed();
+                                        if (RateLimiterDoMobileFaceDetectionFailed() === true) {
+                                            //MobileFaceNotDetected();
+                                            $.NotificationApp.send("Look into the screen", "Look straight into the screen. Your are currently looking at an object on your left.",
+                                                'top-right', '#3b98b5', 'error', 5000, 1, 'plain');
+                                            RendererJsRemoteProctoring.FlagNotLookingAtScreen();
+                                        }
+                                    }
+                                }
+                                else if ((NoseY - 5) <= RightEarY) { // - 5 to make it more strict
+                                    if (GlobalIsRemoteProctoringExamStarted) {
+                                        StartStopWatchForFaceDetectionFailed();
+                                        if (RateLimiterDoMobileFaceDetectionFailed() === true) {
+                                            //MobileFaceNotDetected();
+                                            $.NotificationApp.send("Look into the screen", "Look straight into the screen. Your are currently looking at an object above the screen.",
+                                                'top-right', '#3b98b5', 'error', 5000, 1, 'plain');
+                                            RendererJsRemoteProctoring.FlagNotLookingAtScreen();
+                                        }
+                                    }
+                                }
+                                else if (RightEyeY >= (RightEarY + 6)) {//+4 to make it more lenient
+                                    if (GlobalIsRemoteProctoringExamStarted) {
+                                        StartStopWatchForFaceDetectionFailed();
+                                        if (RateLimiterDoMobileFaceDetectionFailed() === true) {
+                                            //MobileFaceNotDetected();
+                                            $.NotificationApp.send("Look into the screen", "Look straight into the screen. Your are currently looking at an object below the screen.",
+                                                'top-right', '#3b98b5', 'error', 5000, 1, 'plain');
+                                            RendererJsRemoteProctoring.FlagNotLookingAtScreen();
+                                        }
+                                    }
+                                }
+                                else {
+                                    //All good so reset the timer:
+                                    StopStopWatchForFaceDetectionFailed();
+
+                                    //Send for Face recognition:
+                                    if (GlobalIsRemoteProctoringExamStarted) {
+                                        RendererJsRemoteProctoring.DoFaceRecoginition();
+                                    }
+                                }
+
+                                // setTimeout(function () {
+                                //     console.log('RightEyeX: ' + RightEyeX);  
+                                //     console.log('LeftEyeX: ' + LeftEyeX);
+                                // }, 1000)
+                                ctxCanvasTFFaceDetect.fillStyle = "white";
+                                for (let j = 0; j < landmarks.length; j++) {
+                                    const x = landmarks[j][0];
+                                    const y = landmarks[j][1];
+                                    ctxCanvasTFFaceDetect.fillRect(x, y, 2, 2);
+                                }
+
+
+                                for (let i = 0; i < predictions.length; i++) {
+                                    const start = predictions[i].topLeft;
+                                    const end = predictions[i].bottomRight;
+                                    const size = [end[0] - start[0], end[1] - start[1]];
+                                    // ctxCanvasTFFaceDetect.fillStyle = "rgba(255, 0, 0, 0.1)";
+                                    ctxCanvasTFFaceDetect.fillStyle = "rgba(0, 230, 64, 0.2)";
+                                    // Render a rectangle over each detected face.
+                                    ctxCanvasTFFaceDetect.fillRect(start[0], start[1], size[0], size[1]);
+                                }
+                                //Only 1 face detected, reset the 2 face detected timer:
+                                StopStopWatchFor2FaceDetected();
+                            }
+                            else if (predictions.length == 0) {
+                                ctxCanvasTFFaceDetect.clearRect(0, 0, canvas.width, canvas.height);
+
+                                if (GlobalIsRemoteProctoringExamStarted) {
+                                    StartStopWatchForFaceDetectionFailed();
+                                    if (RateLimiterDoMobileFaceDetectionFailed() === true) {
+                                        //MobileFaceNotDetected();
+                                        $.NotificationApp.send("Look into the screen", "Unable to detect a face. Please make sure you are in front of the screen.",
+                                            'top-right', '#3b98b5', 'error', 5000, 1, 'plain');
+                                        RendererJsRemoteProctoring.FlagNotLookingAtScreen();
+                                    }
+                                }
+
+                            }
+                            else if (predictions.length > 1) {
+                                if (GlobalIsRemoteProctoringExamStarted) {
+                                    StartStopWatchFor2FaceDetected();
+                                    if (RateLimiter2FaceDetected() === true) {
+                                        //MobileFaceNotDetected();
+                                        $.NotificationApp.send("More than 1 face detected!", predictions.length + " faces have been detected. This is will be flagged as cheating.",
+                                            'top-right', '#3b98b5', 'error', 5000, 1, 'plain');
+                                        RendererJsRemoteProctoring.FlagMoreThan1FaceDetected();
+                                    }
+                                }
+                            }
+                            requestAnimationFrame(RenderTFFaceDetection);
+                        });
+                    };
+
+                }
+                video.addEventListener('play', function () {
+                    RenderTFFaceDetection();
+
+                    //Listen for voice using hark.js:
+                    var options = {
+                        threshold: -36 //defaut is -50
+                    };
+                    var speechEvents = hark(stream, options);
+
+                    speechEvents.on('speaking', function () {
+                        if (GlobalIsRemoteProctoringExamStarted) {
+                            console.log('speaking');
+                            $.NotificationApp.send("Voice detected!", "Do not talk during the exam. This is will be flagged as cheating.",
+                                'top-right', '#FF8C00', 'warning', 5000, 1, 'plain');
+                            RendererJsRemoteProctoring.FlagVoiceDetected();
+                        }
+                    });
+
+                    // speechEvents.on('stopped_speaking', function () {
+                    //     console.log('stopped_speaking');
+                    // });
+                });
+            });
+
+        async function detectFrame(video, model) {
+            await model.detect(video).then(predictions => {
+
+                requestAnimationFrame(() => {
+                    //ObjectDetectAnimationFrameRequestCounter++;
+                    // if (ObjectDetectAnimationFrameRequestCounter % 5 === 0 && isExamEnded === false) {
+                    // if (ObjectDetectAnimationFrameRequestCounter === 1000000000) {
+                    //     ObjectDetectAnimationFrameRequestCounter
+                    // }
+                    this.renderPredictions(predictions);
+                    //await renderPredictions(predictions);
+                    //}
+                    if (isExamEnded === false) {
+                        setTimeout(function () {
+                            this.detectFrame(video, model);
+                        }, 500);
+                    }
+
+                });
+            });
+            // model.classify(video).then(predictions => {
+            //     //this.renderPredictions(predictions);
+            //     requestAnimationFrame(() => {
+            //         console.log('Predictions: ');
+            //         console.log(predictions);
+            //         var str = '';
+            //         predictions.forEach(function(i){
+            //             str += (" " + i.className)
+            //         });
+            //         document.getElementById('lblPrediction').innerHTML = str;
+            //         this.detectFrame(video, model);
+            //     });
+
+            // });
+        }
+    </script>
+    <script>
+        const electron = require('electron');
+        const { ipcRenderer } = electron;
+    </script>
+    <script>
+        var btnCloseExamSoftware = document.querySelector('#btnCloseExamSoftware');
+        btnCloseExamSoftware.addEventListener("click", function (event) {
+            ipcRenderer.send('close:application', true);
+        });
+
+        const psList = require('ps-list');
+        var psNode = require('ps-node');
+
+        function filterValue(obj, key, value) {
+            return obj.find(function (v) { return v[key] === value });
+        }
+        async function CheckForBlaclistedRunningSoftware() {
+            //(async () => {
+            var ListArray = await psList();
+            var resultAnyDesk = await ListArray.find(obj => {
+                return obj.name.toLowerCase().includes('anydesk');
+            });
+            var resultTeamViewer = await ListArray.find(obj => {
+                return obj.name.toLowerCase().includes('teamviewer');
+            })
+            //console.log(result);
+            //=> [{pid: 3213, name: 'node', cmd: 'node test.js', ppid: 1, uid: 501, cpu: 0.1, memory: 1.5}, …]
+            var ListBlacklistedRunningSoftwaresDiv = document.getElementById('ListBlacklistedRunningSoftwaresDiv');
+            ListBlacklistedRunningSoftwaresDiv.innerHTML = '';
+            if (resultAnyDesk !== undefined) {
+                $('#CloseSoftwareError').modal('show');
+                const div = document.createElement('div');
+                div.style.marginTop = '10px';
+
+
+                const span = document.createElement('span');
+                span.innerText = "Any Desk";
+
+                const button = document.createElement('button');
+                var att = document.createAttribute("data-pid");       // Create a "class" attribute
+                att.value = resultAnyDesk.pid;
+                button.setAttributeNode(att);
+                button.innerText = "Close";
+                //button.id = "btnCloseAnyDesk";
+                button.style.marginLeft = '15px';
+
+                div.append(span);
+                div.append(button);
+                ListBlacklistedRunningSoftwaresDiv.append(div);
+
+                button.addEventListener("click", function () {
+                    this.disabled = true;
+                    this.innerText = "Closing software. Please wait...";
+                    var pid = this.getAttribute("data-pid");
+                    // Pass signal SIGKILL for killing the process without allowing it to clean up
+                    // psNode.kill(pid, 'SIGKILL', function (err) {
+                    psNode.kill(pid, function (err) {
+                        if (err) {
+                            button.innerText = "Unable to close software. Kindly close it manually and restart your computer.";
+                            console.log('Error in killing : ' + JSON.stringify(err));
+                            throw new Error(err);
+
+                        }
+                        else {
+                            console.log('Process %s has been killed without a clean-up!', pid);
+                            button.style.display = 'none';
+                            $('#CloseSoftwareError').modal('hide');
+                            CheckForBlaclistedRunningSoftware();
+                        }
+                    });
+                });
+            }
+            if (resultTeamViewer !== undefined) {
+                $('#CloseSoftwareError').modal('show');
+                const div = document.createElement('div');
+                div.style.marginTop = '10px';
+
+                const span = document.createElement('span');
+                span.innerText = "Team Viewer";
+
+                const button = document.createElement('button');
+                var att = document.createAttribute("data-pid");       // Create a "class" attribute
+                att.value = resultTeamViewer.pid;
+                button.setAttributeNode(att);
+                button.innerText = "Close";
+                //button.id = "btnCloseTeamViewer";
+                button.style.marginLeft = '15px';
+
+                div.append(span);
+                div.append(button);
+                ListBlacklistedRunningSoftwaresDiv.append(div);
+
+                button.addEventListener("click", function () {
+                    this.disabled = true;
+                    this.innerText = "Closing software. Please wait...";
+                    var pid = this.getAttribute("data-pid");
+                    // Pass signal SIGKILL for killing the process without allowing it to clean up
+                    //psNode.kill(pid, 'SIGKILL', function (err) {
+                    psNode.kill(pid, function (err) {
+                        if (err) {
+                            button.innerText = "Unable to close software. Kindly delete it and restart your computer.";
+                            console.log('Error in killing : ' + JSON.stringify(err));
+                            throw new Error(err);
+                        }
+                        else {
+                            console.log('Process %s has been killed without a clean-up!', pid);
+                            button.style.display = 'none';
+                            $('#CloseSoftwareError').modal('hide');
+                            CheckForBlaclistedRunningSoftware();
+                        }
+                    });
+                });
+            }
+            // if (resultTeamViewer !== undefined) {
+            //     $('#CloseSoftwareError').modal('show');
+            //     const div = document.createElement('div');
+            //     div.innerText = "Team Viewer";
+            //     ListBlacklistedRunningSoftwaresDiv.append(div);
+            // }
+
+
+            //})();
+        }
+        CheckForBlaclistedRunningSoftware();
+    </script>
+    <script>
+        //To detect Multiple Screens
+        const { desktopCapturer } = electron;
+
+        var btnMultipleScreenDetectedCloseSoftware = document.querySelector('#btnMultipleScreenDetectedCloseSoftware');
+        btnMultipleScreenDetectedCloseSoftware.addEventListener("click", function (event) {
+            ipcRenderer.send('close:application', true);
+        });
+
+        function DetectMultipleScreens() {
+            var screenCounter = 0;
+
+            desktopCapturer.getSources({ types: ['screen'] }).then(async sources => {
+                for (let i = 0; i < sources.length; ++i) {
+                    if (sources[i].name.toLowerCase().includes('screen') || sources[i].id.toLowerCase().includes('screen')) {
+                        screenCounter++;
+                    }
+                }
+                //console.log('Screen couter: ' + screenCounter);
+                if (screenCounter > 1) {
+                    //alert('Please disconnect external screen.');
+                    $('#MultipleScreenDetectedErrorModal').modal('show');
+                }
+
+                //Show alert to user to enable permissions:
+                // const {
+                //     hasScreenCapturePermission,
+                //     hasPromptedForPermission
+                // } = require('mac-screen-capture-permissions');
+                // //console.log('hasPromptedForPermission ' + hasPromptedForPermission());
+                // // false
+                // //console.log('hasScreenCapturePermission ' + hasScreenCapturePermission());
+                // // false
+                // //console.log('hasPromptedForPermission ' + hasPromptedForPermission());
+                // // true
+                // // After accepting the permissions
+                // //console.log('hasScreenCapturePermission ' + hasScreenCapturePermission());
+
+                // if (hasScreenCapturePermission() === false) {
+                //     $('#ScreenRecordPermissionsErrorModal').show();
+                // }
+            });
+        }
+        DetectMultipleScreens();//For calling the first time the app opens
+        setInterval(function () {//For calling every few seconds
+            DetectMultipleScreens();
+        }, 15000);
+
+    </script>
+    <script>
+        //Check for desktop app updates
+        var btnOutdatedDesktopAppVersionCloseSoftware = document.querySelector('#btnOutdatedDesktopAppVersionCloseSoftware');
+        btnOutdatedDesktopAppVersionCloseSoftware.addEventListener("click", function (event) {
+            ipcRenderer.send('close:application', true);
+        });
+        $.ajax(
+            {
+                url: AssessmentConfig.GetLatestAppVersionForDesktopUpdate,
+                type: "GET",
+                success: function (result) {
+                    //console.log(result);
+                    var resultArray = result.split(',');
+                    var LatestDesktopAppVersion = parseInt(resultArray[0]);
+                    var CurrentDesktopAppVersion = parseInt(AssessmentConfig.CurrentDesktopAppVersion);
+                    if (CurrentDesktopAppVersion < LatestDesktopAppVersion) {
+                        $('#OutdatedDesktopAppVersionErrorModal').modal('show');
+                        $('#spnDownloadDesktopAppLink').text(resultArray[1]);
+                    }
+                },
+                error: function (data) {
+                    swal("Unable to connect", 'Oops, unable to check for app updates. This is probably an issue with your internet connection. Kindly restart the application to try again', "error").then(function () {
+
+                    });
+                }
+            });
+    </script>
+    <script>
+        // function RemoveBranding() {
+        //     var ifrm = document.getElementById('iframe_id');
+
+        //     // using reference to iframe (ifrm) obtained above
+        //     var win = ifrm.contentWindow; // reference to iframe's window
+        //     // reference to document in iframe
+        //     var doc = ifrm.contentDocument ? ifrm.contentDocument : ifrm.contentWindow.document;
+        //     var logoLogin = doc.getElementsByClassName("card-header");
+
+        //     var logoInner = doc.getElementsByClassName("navbar-brand-logo");
+        //     var innerMessage = doc.getElementById("instance-142-header");
+
+        //     var sectionname = doc.getElementsByClassName("sectionname");
+        //     var summary = doc.getElementsByClassName("summary");
+
+        //     if (logoLogin[0]) {
+        //         logoLogin[0].innerHTML = '';
+        //     }
+        //     if (logoInner[0]) {
+        //         logoInner[0].innerHTML = '';
+        //     }
+        //     if (logoInner[1]) {
+        //         logoInner[1].innerHTML = '';
+        //     }
+        //     if (innerMessage) {
+        //         innerMessage.innerHTML = '';
+        //     }
+
+        //     if (sectionname[1]) {
+        //         sectionname[1].innerHTML = '';
+        //     }
+        //     if (summary[0]) {
+        //         summary[0].innerHTML = '';
+        //     }
+        //     console.log('removed logo');
+        // }
+        document.onkeydown = function (evt) {
+            console.log(evt.keyCode);
+            //evt.preventDefault();
+            if (evt.keyCode == 91 || evt.keyCode == '91') {
+                console.log('in 91')
+                // evt.stopImmediatePropagation();
+                // evt.cancelBubble = true;
+                var e = $.Event('keypress');
+                e.which = 91; // Character 'A'
+                $('item').trigger(e);
+
+                return false;
+            }
+        }
+        document.getElementById('iframe_id').onload = function () {
+            console.log('Inside iframe onload');
+            var ifrm = document.getElementById('iframe_id');
+
+            // using reference to iframe (ifrm) obtained above
+            var win = ifrm.contentWindow; // reference to iframe's window
+            var doc = ifrm.contentDocument ? ifrm.contentDocument : ifrm.contentWindow.document;
+            $(doc).ready(function () {
+                console.log('Inside iframe ready dom');
+                //RemoveBranding();
+
+                // StartExam('Symbiosis Exam', '', 'SYMB09874', 'Neville K', 'SYMBId-0002', '1');
+                //Start remote proctoring immediately:
+                doc.onkeydown = function (evt) {
+                    console.log(evt.keyCode);
+                    //evt.preventDefault();
+                    if (evt.keyCode == 91 || evt.keyCode == '91') {
+                        console.log('in 91')
+                        // evt.stopImmediatePropagation();
+                        // evt.cancelBubble = true;
+                        var e = $.Event('keypress');
+                        e.which = 91; // Character 'A'
+                        $('item').trigger(e);
+
+                        return false;
+                    }
+                }
+
+
+
+                // var e = new KeyboardEvent("keydown", {
+                //     bubbles: true,
+                //     cancelable: true,
+                //     //char: "Q",
+                //     key: "Meta",
+                //     shiftKey: true,
+                //     keyCode: 91
+                // });
+
+                // setInterval(function () {
+                //     doc.getElementById('txtActivationKey').dispatchEvent(e);
+                // }, 5000);
+            });
+        }
+        var btnCloseExamSoftwareConfirmed = document.querySelector('#btnCloseExamSoftwareConfirmed');
+        btnCloseExamSoftwareConfirmed.addEventListener("click", function (event) {
+            try {
+                console.log('stop window.streamReference = ' + window.streamReferenceForWebRTC);
+                if (window.streamReferenceForWebRTC) {
+                    window.streamReferenceForWebRTC.getAudioTracks().forEach(function (track) {
+                        track.stop();
+                    });
+                    window.streamReferenceForWebRTC.getVideoTracks().forEach(function (track) {
+                        track.stop();
+                    });
+                    //window.streamReferenceForWebRTC = null;
+                }
+
+                let stream = video.srcObject;
+                let tracks = stream.getTracks();
+                tracks.forEach(function (track) {
+                    track.stop();
+                });
+                video.srcObject = null;
+            }
+            catch (e) {
+                console.log('Error in stopping stream');
+            }
+            EndExam();
+            setInterval(function () {
+                if (GlobalIsSoftwareReadyToClose === true) {
+                    ipcRenderer.send('close:application', true);
+                }
+            }, 5000);
+
+        });
+        // setTimeout(function () {
+        //     try{
+        //         EndExam();
+        //     }
+        //     catch(e){
+        //         console.log('Error in force shutting the software after a duration')
+        //     }
+        //     setInterval(function () {
+        //         ipcRenderer.send('close:application', true);
+        //     }, 5000);
+        // }, (1000 * 60 * 60)) * 5; //After 5 hours close the exam on its own
+
+
+        // var unloadEvent = function (e) {
+        //     var confirmationMessage = "Warning: Leaving this page will result in any unsaved data being lost. Are you sure you wish to continue?";
+        //     (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+        //     return confirmationMessage; //Webkit, Safari, Chrome etc.
+        // };
+        // window.addEventListener("beforeunload", unloadEvent);
+
+        //window.onblur = function(){console.log('not in focus!!!!!!!!!!')};
+
+
+    </script>
+    <script>
+        const app = electron.remote.app;
+        console.log(app.getGPUFeatureStatus());
+        app.getGPUInfo('complete').then(function (data) {
+            console.log('GPU info: ' + JSON.stringify(data));
+        });
+    </script>
+    <script>
+        async function getMediaCheck() {
+            try {
+                var stream = await navigator.mediaDevices.getUserMedia({
+                    audio: false,
+                    video: { facingMode: "user", }
+                });
+                /* use the stream */
+            } catch (err) {
+                /* handle the error */
+                // $("#CheatingAlertModal p").text('Web camera has been dosconnected. This will be considered as cheating!');
+                // $("#CheatingAlertModal").modal();
+                $.NotificationApp.send("Webcam disconnected!", "Web camera has been dosconnected. This will be considered as cheating!",
+                    'top-right', '#3b98b5', 'error', 5000, 1, 'plain');
+
+                if (GlobalIsRemoteProctoringExamStarted) {
+                    RendererJsRemoteProctoring.WebcamDisconnectedDetected();
+                }
+            }
+
+            try {
+                var stream = await navigator.mediaDevices.getUserMedia({
+                    audio: true,
+                    video: false
+                });
+                /* use the stream */
+            } catch (err) {
+                /* handle the error */
+                // $("#CheatingAlertModal p").text('Microphone has been dosconnected. This will be considered as cheating!');
+                // $("#CheatingAlertModal").modal();
+
+                $.NotificationApp.send("Microphone disconnected!", "Microphone has been dosconnected. This will be considered as cheating!",
+                    'top-right', '#3b98b5', 'error', 5000, 1, 'plain');
+
+                if (GlobalIsRemoteProctoringExamStarted) {
+                    RendererJsRemoteProctoring.MicrophoneDisconnectedDetected();
+                }
+            }
+        }
+
+        setInterval(function () {
+            getMediaCheck();
+        }, 10000)
+    </script>
+    <script>
+        // function RemoveBranding() {
+        //     var ifrm = document.getElementById('iframe_id');
+
+        //     // using reference to iframe (ifrm) obtained above
+        //     var win = ifrm.contentWindow; // reference to iframe's window
+        //     // reference to document in iframe
+        //     var doc = ifrm.contentDocument ? ifrm.contentDocument : ifrm.contentWindow.document;
+        //     var logoLogin = doc.getElementsByClassName("card-header");
+
+        //     var logoInner = doc.getElementsByClassName("navbar-brand-logo");
+        //     var innerMessage = doc.getElementById("instance-142-header");
+
+        //     var sectionname = doc.getElementsByClassName("sectionname");
+        //     var summary = doc.getElementsByClassName("summary");
+
+        //     if (logoLogin[0]) {
+        //         logoLogin[0].innerHTML = '';
+        //     }
+        //     if (logoInner[0]) {
+        //         logoInner[0].innerHTML = '';
+        //     }
+        //     if (logoInner[1]) {
+        //         logoInner[1].innerHTML = '';
+        //     }
+        //     if (innerMessage) {
+        //         innerMessage.innerHTML = '';
+        //     }
+
+        //     if (sectionname[1]) {
+        //         sectionname[1].innerHTML = '';
+        //     }
+        //     if (summary[0]) {
+        //         summary[0].innerHTML = '';
+        //     }
+        //     console.log('removed logo');
+        // }
+
+        // setInterval(function () {
+        //     RemoveBranding();
+        // }, 1000)
+
+        // doc.addEventListener('DOMContentLoaded', (event) => {
+        //     console.log('inside DOMContentLoaded');
+        //     RemoveBranding();
+        // })
+
+        //Detect Parent Windows Key Press:
+        document.onkeydown = function (evt) {
+            console.log(evt.keyCode);
+            //evt.preventDefault();
+            if (evt.keyCode == 91 || evt.keyCode == '91') {
+                console.log('Windows Key Pressed - Parent');
+                WindowsKeyPressedAction();
+
+            }
+        }
+
+        //Detect moving away from parent iframe:
+        window.onblur = function (e) {
+            console.log('parent window Blur event attempted');
+            WindowsKeyPressedAction();
+            //window.focus();
+        }
+
+
+        document.getElementById('iframe_id').onload = function () {
+            console.log('Inside iframe onload');
+            var ifrm = document.getElementById('iframe_id');
+
+            // using reference to iframe (ifrm) obtained above
+            var win = ifrm.contentWindow; // reference to iframe's window
+            var doc = ifrm.contentDocument ? ifrm.contentDocument : ifrm.contentWindow.document;
+            $(doc).ready(function () {
+                console.log('Inside iframe ready dom');
+                //RemoveBranding();
+
+                //Detect iFrame Windows Key Press:
+                doc.onkeydown = function (evt) {
+                    console.log(evt.keyCode);
+                    //evt.preventDefault();
+                    if (evt.keyCode == 91 || evt.keyCode == '91') {
+                        console.log('Windows Key Pressed - iFrame');
+                        WindowsKeyPressedAction();
+                    }
+                }
+
+                win.onblur = function (e) {
+                    console.log('parent window Blur event attempted');
+                    WindowsKeyPressedAction();
+                    //win.focus();
+                }
+            });
+        }
+
+        function WindowsKeyPressedAction() {
+            // if (GlobalIsRemoteProctoringExamStarted) {
+            //     RendererJsRemoteProctoring.WindowsKeyPressDetected();
+
+            //     //Show the modal in the iframe:
+            //     // var iframe = document.getElementById('iframe_id');
+            //     // iframe.contentWindow.postMessage('windowskeypressed', '*');
+
+            //     $.NotificationApp.send("Attempt to leave exam software", "You have attempted to move out of the exam software. This has been detected and reported.",
+            //         'top-right', '#3b98b5', 'error', 5000, 1, 'plain');
+
+            //     // $("#CheatingAlertModal p").text('Attempt made to move out of exam. This will be flagged as chaeating.');
+            //     // $("#CheatingAlertModal").modal();
+
+            //     // var counter = 10;
+            //     // setInterval(function () {
+            //     //     --counter;
+            //     //     if (counter >= 0) {
+            //     //         $("#WindowsKeyPressedAlertModal p").text('Attempt made to move out of exam. You will be disqualified. Ending exam in ' + counter + ' second(s).');
+            //     //         $("#WindowsKeyPressedAlertModal").modal();
+            //     //     }
+            //     //     if (counter === 0) {
+            //     //         //Send message to iFrame To close the exam
+            //     //         var iframe = document.getElementById('iframe_id');
+            //     //         iframe.contentWindow.postMessage('windowskeypressed', '*');
+
+            //     //         $("#WindowsKeyPressedAlertModal").modal('hide');
+            //     //     }
+            //     // }, 1000)
+
+            //     if (DisableForegroundingFromMainForDebugging === false) {
+            //         ipcRenderer.send('blur:application', true);
+            //     }
+            // }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Schoolguru</title>
+    <style>
+        iframe {
+            overflow: auto;
+            height: auto;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="../../assets/bootstrap/css/bootstrap.css">
+    <!-- HELPERS -->
+
+    <!-- ELEMENTS -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/badges.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/buttons.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/content-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/dashboard-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/forms.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/images.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/info-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/invoice.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/loading-indicators.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/menus.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/panel-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/response-messages.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/responsive-tables.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/ribbon.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/social-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/tables.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/tile-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/timeline.css">
+
+    <!-- ICONS -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/icons/fontawesome/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/icons/linecons/linecons.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/icons/spinnericon/spinnericon.css">
+
+
+    <!-- WIDGETS -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/accordion-ui/accordion.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/calendar/calendar.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/carousel/carousel.css">
+
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/charts/justgage/justgage.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/charts/morris/morris.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/charts/piegage/piegage.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/charts/xcharts/xcharts.css">
+
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/chosen/chosen.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/colorpicker/colorpicker.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/datatable/datatable.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/datepicker/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/datepicker-ui/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/dialog/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/dropdown/dropdown.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/dropzone/dropzone.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/file-input/fileinput.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/input-switch/inputswitch.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/input-switch/inputswitch-alt.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/ionrangeslider/ionrangeslider.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/jcrop/jcrop.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/jgrowl-notifications/jgrowl.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/loading-bar/loadingbar.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/maps/vector-maps/vectormaps.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/markdown/markdown.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/modal/modal.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/multi-select/multiselect.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/multi-upload/fileupload.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/nestable/nestable.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/noty-notifications/noty.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/popover/popover.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/pretty-photo/prettyphoto.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/progressbar/progressbar.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/range-slider/rangeslider.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/slidebars/slidebars.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/slider-ui/slider.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/summernote-wysiwyg/summernote-wysiwyg.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/tabs-ui/tabs.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../assets/widgets/theme-switcher/themeswitcher.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/timepicker/timepicker.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/tocify/tocify.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/tooltip/tooltip.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/touchspin/touchspin.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/uniform/uniform.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/wizard/wizard.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/xeditable/xeditable.css">
+
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/sweet-alert/sweetalert2.min.css">
+
+    <!-- SNIPPETS -->
+
+    <!-- <link rel="stylesheet" type="text/css" href="../../assets/snippets/chat.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/files-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/login-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/notification-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/progress-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/todo.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/user-profile.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/mobile-navigation.css"> -->
+
+    <!-- APPLICATIONS -->
+
+    <!-- <link rel="stylesheet" type="text/css" href="../../assets/applications/mailbox.css"> -->
+
+    <!-- Admin theme -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/themes/admin/layout.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/themes/admin/color-schemes/default.css">
+
+    <!-- Components theme -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/themes/components/default.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/themes/components/border-radius.css">
+
+    <!-- Admin responsive -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/responsive-elements.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/admin-responsive.css">
+
+    <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+    <!-- JS Core -->
+
+    <script type="text/javascript" src="../../assets/js-core/jquery-core.js"></script>
+   
+    <!-- <script type="text/javascript" src="../../assets/js-core/c"></script>
+    <script type="text/javascript" src="../../assets/js-core/jquery-ui-mouse.js"></script>
+    <script type="text/javascript" src="../../assets/js-core/jquery-ui-position.js"></script> -->
+    <!--<script type="text/javascript" src="../../assets/js-core/transition.js"></script>-->
+    <!-- <script type="text/javascript" src="../../assets/js-core/modernizr.js"></script>
+    <script type="text/javascript" src="../../assets/js-core/jquery-cookie.js"></script> -->
+
+
+    <!-- <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script> -->
+    <!-- JS Core -->
+    <script type="text/javascript" src="../../assets/js-core/jquery-core.js"></script>
+    <script type="text/javascript" src="../../assets/tether/js/tether.js"></script>
+    <script type="text/javascript" src="../../assets/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/modal/modal.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/tooltip/tooltip.css">
+    <script>if (window.module) module = window.module;</script>
+    <script>
+        window.addEventListener('message', function (event) {
+            console.log('msg recd');
+            if (event.data.msg == "startproctor") {
+                var data = event.data;
+                console.log("Username: " + data.username);
+            }
+
+            //Send a msg back to the child frame:
+            var frame = document.getElementById('iframe_id');
+            frame.contentWindow.postMessage('hi', '*');
+        }, false);
+    </script>
+</head>
+
+<body style="margin:0px;padding:0px;overflow:hidden">
+    <div style="position: absolute; top:1px; left: 1px; zoom: 0.44">
+        <video id="videoFaceDetect" width="320" height="240" autoplay muted
+            style="position: absolute; left:0; top:0"></video>
+        <canvas id="canvas" width="320" height="240" style="position: absolute; left:0; top:0"></canvas>
+        <canvas id="canvas2" width="320" height="240" style="position: absolute; left:0; top:0"></canvas>
+        <video id="videoProctor" width="320" height="240" autoplay style="position: absolute; left: 400px"></video>
+    </div>
+    <div class="form-group" style="position:absolute; top:10px;right:10px">
+        <div class="input-group">
+            <button id="btnCloseExam" type="button" class="btn btn-border btn-alt border-red btn-link font-red">
+                <i class="glyph-icon icon-exclamation" title="" data-original-title=".icon-arrow-left"></i>&nbsp; Close
+                Exam Software</button>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal" id="CheatingAlertModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Warning!</h4>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal" id="EndExamModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Are you sure you want to end this exam?</h4>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnEndExamConfirmed" type="button"
+                        class="btn btn-border btn-alt border-red btn-link font-red" data-dismiss="modal">Yes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal" id="internetConnectionError" role="dialog" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Unable to connect to the internet!</h4>
+                </div>
+                <div class="modal-body" style="text-align: left; font-weight: bold">
+                    You are unable to connect to the internet. Kindly close the exam software and re-start once
+                    internet
+                    connection is established.
+                </div>
+                <div class="modal-footer">
+                    <button id="btnCloseExamSoftwareNoInternet" type="button"
+                        class="btn btn-border btn-alt border-red btn-link font-red" data-dismiss="modal">Close
+                        software</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="webcamCaptureError" role="dialog" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Unable to detect web camera!</h4>
+                </div>
+                <div class="modal-body" style="text-align: left; font-weight: bold">
+                    Kindly follow the following instructions:
+                    <br />
+                    <br />1. Ensure that your web camera is connected and functional.
+                    <br />2. Ensure that no other software on this computer is accessing the web camera.
+                    <br />Close the exam software and try again.
+                </div>
+                <div class="modal-footer">
+                    <button id="btnCloseExamSoftwareWebcamCaptureError" type="button"
+                        class="btn btn-border btn-alt border-red btn-link font-red" data-dismiss="modal">Close
+                        software</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="audioCaptureError" role="dialog" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Unable to detect microphone audio!</h4>
+                </div>
+                <div class="modal-body" style="text-align: left; font-weight: bold">
+                    Kindly follow the following instructions:
+                    <br />
+                    <br />1. Ensure that your microphone is correctly intalled (this is usually in-built with your
+                    computer).
+                    <br />2. Close the exam software and try again.
+                </div>
+                <div class="modal-footer">
+                    <button id="btnCloseExamSoftwareAudioError" type="button"
+                        class="btn btn-border btn-alt border-red btn-link font-red" data-dismiss="modal">Close
+                        software</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="QuitExamSoftwareModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Are you sure you want to close the exam software?</h4>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnCloseExamSoftwareConfirmed" type="button"
+                        class="btn btn-border btn-alt border-red btn-link font-red" data-dismiss="modal">Yes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="selectLMSLinkModal" role="dialog" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Select LMS Server:</h4>
+                </div>
+
+                <div class="modal-body" style="text-align: left; font-weight: bold">
+                    <div style="padding-top: 10px; padding-bottom: 10px">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <select id="ddlAssessmentServerList" class="form-control" style="height:auto">
+                                        <option selected="selected" value="Select">
+                                            Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button id="btnSelectLMSServer" type="button"
+                                    class="btn btn-block btn-lg btn-primary waves-effect waves-light"
+                                    style="margin-top: 25px">Select LMS Server</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <iframe id="iframe_id" src="https://assessments.eduswitch.com" frameborder="0"
+        style="overflow:hidden;height:100%;width:100%; margin-top: 100px" height="100%" width="100%"></iframe> -->
+
+
+    <script>
+        $('iframe').css('height', (screen.height - 100));
+    </script>
+    // <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    // <script src="../../../includes/js/FaceDetection/tracking.js" type="text/javascript"></script>
+    // <script src="../../../includes/js/FaceDetection/face-min.js" type="text/javascript"></script>
+    // <script src="../../../includes/js/FaceDetection/CVV/cvv.js" type="text/javascript"></script>
+    // <script src="../../../includes/js/FaceDetection/CVV/face.js" type="text/javascript"></script>
+
+    // <script src="../../../includes/js/mediastreamrecorder.js" type="text/javascript"></script>
+
+    <script src="assets/plugins/sweet-alert/sweetalert2.min.js"></script>
+    <script>
+        const AssessmentConfig = require('../../../assessment-config.json');
+        $(document).ready(function () {
+            $.ajax(
+                {
+                    url: AssessmentConfig.GetActiveLMSLinks,
+                    type: "GET",
+                    success: function (result) {
+                        //console.log(result);
+                        if (result.isError === false) {
+                            result.data.forEach(function (item) {
+                                $("#ddlAssessmentServerList").append(new Option(item.LinkName, item.LinkUrl));
+                                $('#selectLMSLinkModal').modal();
+                            });
+                        }
+                        else {
+                            swal("Oops, something went wrong", 'There was an unexpected error in attempting to fetch active LMS server details. Error: ' + result.errorMsg, "error").then(function () {
+
+                            });
+                        }
+                    },
+                    error: function (data) {
+                        swal("Unable to connect", 'Oops, unable to fetch LMS server links. This is probably an issue with your internet connection. Kindly restart the application to try again', "error").then(function () {
+
+                        });
+                    }
+                });
+        });
+    </script>
+
+    // <script>
+    //     var setTimeoutFaceDetection; //global variable also used in renderer-FaceDetectionRecognition.js
+    //     var formDataWebCamError = []; //global To retry sending failed web cam recordings used in renderer.js and renderer-Exam.js used for Desktop recordings currently
+    //     let isExamEnded = false; //Global used in used in renderer.js and renderer-Exam.js
+
+    //     function StartTrackingJsFaceDetection() {
+    //         var canvas2 = document.getElementById('canvas2');
+    //         var context2 = canvas2.getContext('2d');
+
+    //         var tracker = new tracking.ObjectTracker('face');
+    //         tracker.setInitialScale(4);
+    //         tracker.setStepSize(2);
+    //         tracker.setEdgesDensity(0.1);
+
+    //         tracking.track('#videoFaceDetect', tracker, { camera: true });
+
+
+    //         tracker.on('track', function (event) {
+    //             context2.clearRect(0, 0, canvas2.width, canvas2.height);
+    //             if (event.data.length === 0) {
+    //                 //Do nothing, this is handled in renderer-FaceDetectionRecognition.js
+    //             }
+    //             else { //If a face is detected, reset the global variables for face detection
+    //                 // counterDetectNoFace = 0;
+    //                 clearTimeout(setTimeoutFaceDetection);
+    //                 setTimeoutFaceDetection = undefined;
+    //             }
+
+    //             event.data.forEach(function (rect) {
+    //                 context2.strokeStyle = '#a64ceb';
+    //                 context2.strokeRect(rect.x, rect.y, rect.width, rect.height);
+    //                 context2.font = '11px Helvetica';
+    //                 context2.fillStyle = "#fff";
+    //                 // context2.fillText('x: ' + rect.x + 'px', rect.x + rect.width + 5, rect.y + 11);
+    //                 // context2.fillText('y: ' + rect.y + 'px', rect.x + rect.width + 5, rect.y + 22);
+    //             });
+    //         });
+    //     }
+    //     StartTrackingJsFaceDetection();
+    //     require('../../../Renderer/renderer-Login.js');
+    //     require('../../../renderer.js');
+    // </script>
+
+</body>
+
+</html>

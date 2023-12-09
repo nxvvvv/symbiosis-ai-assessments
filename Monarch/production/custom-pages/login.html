@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* Loading Spinner */
+
+        .spinner {
+            margin: 0;
+            width: 70px;
+            height: 18px;
+            margin: -35px 0 0 -9px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center
+        }
+
+        .spinner>div {
+            width: 18px;
+            height: 18px;
+            background-color: #333;
+            border-radius: 100%;
+            display: inline-block;
+            -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+            animation: bouncedelay 1.4s infinite ease-in-out;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both
+        }
+
+        .spinner .bounce1 {
+            -webkit-animation-delay: -.32s;
+            animation-delay: -.32s
+        }
+
+        .spinner .bounce2 {
+            -webkit-animation-delay: -.16s;
+            animation-delay: -.16s
+        }
+
+        @-webkit-keyframes bouncedelay {
+
+            0%,
+            80%,
+            100% {
+                -webkit-transform: scale(0.0)
+            }
+
+            40% {
+                -webkit-transform: scale(1.0)
+            }
+        }
+
+        @keyframes bouncedelay {
+
+            0%,
+            80%,
+            100% {
+                transform: scale(0.0);
+                -webkit-transform: scale(0.0)
+            }
+
+            40% {
+                transform: scale(1.0);
+                -webkit-transform: scale(1.0)
+            }
+        }
+
+        .loaderImageDiv {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            /* position: fixed; */
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            padding: 10px;
+            background-color: transparent;
+            background-color: rgba(0, 0, 0, .4);
+            z-index: 1060;
+            background-image: url('../../assets/images/spinner/loader.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicons -->
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+        href="../../assets/images/icons/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+        href="../../assets/images/icons/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+        href="../../assets/images/icons/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/images/icons/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../../assets/images/icons/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="../../assets/bootstrap/css/bootstrap.css">
+    <!-- HELPERS -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/animate.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/backgrounds.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/boilerplate.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/border-radius.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/grid.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/page-transitions.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/spacing.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/typography.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/utils.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/colors.css">
+
+    <!-- ELEMENTS -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/badges.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/buttons.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/content-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/dashboard-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/forms.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/images.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/info-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/invoice.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/loading-indicators.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/menus.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/panel-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/response-messages.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/responsive-tables.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/ribbon.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/social-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/tables.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/tile-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/elements/timeline.css">
+
+    <!-- ICONS -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/icons/fontawesome/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/icons/linecons/linecons.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/icons/spinnericon/spinnericon.css">
+
+
+    <!-- WIDGETS -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/accordion-ui/accordion.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/calendar/calendar.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/carousel/carousel.css">
+
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/charts/justgage/justgage.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/charts/morris/morris.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/charts/piegage/piegage.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/charts/xcharts/xcharts.css">
+
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/chosen/chosen.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/colorpicker/colorpicker.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/datatable/datatable.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/datepicker/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/datepicker-ui/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/dialog/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/dropdown/dropdown.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/dropzone/dropzone.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/file-input/fileinput.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/input-switch/inputswitch.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/input-switch/inputswitch-alt.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/ionrangeslider/ionrangeslider.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/jcrop/jcrop.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/jgrowl-notifications/jgrowl.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/loading-bar/loadingbar.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/maps/vector-maps/vectormaps.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/markdown/markdown.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/modal/modal.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/multi-select/multiselect.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/multi-upload/fileupload.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/nestable/nestable.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/noty-notifications/noty.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/popover/popover.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/pretty-photo/prettyphoto.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/progressbar/progressbar.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/range-slider/rangeslider.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/slidebars/slidebars.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/slider-ui/slider.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/summernote-wysiwyg/summernote-wysiwyg.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/tabs-ui/tabs.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../assets/widgets/theme-switcher/themeswitcher.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/timepicker/timepicker.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/tocify/tocify.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/tooltip/tooltip.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/touchspin/touchspin.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/uniform/uniform.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/wizard/wizard.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/xeditable/xeditable.css">
+
+    <link rel="stylesheet" type="text/css" href="../../assets/widgets/sweet-alert/sweetalert2.min.css">
+
+    <!-- SNIPPETS -->
+
+    <!-- <link rel="stylesheet" type="text/css" href="../../assets/snippets/chat.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/files-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/login-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/notification-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/progress-box.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/todo.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/user-profile.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/snippets/mobile-navigation.css"> -->
+
+    <!-- APPLICATIONS -->
+
+    <!-- <link rel="stylesheet" type="text/css" href="../../assets/applications/mailbox.css"> -->
+
+    <!-- Admin theme -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/themes/admin/layout.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/themes/admin/color-schemes/default.css">
+
+    <!-- Components theme -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/themes/components/default.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/themes/components/border-radius.css">
+
+    <!-- Admin responsive -->
+
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/responsive-elements.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/helpers/admin-responsive.css">
+
+    <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+    <!-- JS Core -->
+
+    <script type="text/javascript" src="../../assets/js-core/jquery-core.js"></script>
+    <!-- <script type="text/javascript" src="../../assets/js-core/jquery-ui-core.js"></script> -->
+    <!-- <script type="text/javascript" src="../../assets/js-core/c"></script>
+    <script type="text/javascript" src="../../assets/js-core/jquery-ui-mouse.js"></script>
+    <script type="text/javascript" src="../../assets/js-core/jquery-ui-position.js"></script> -->
+    <!--<script type="text/javascript" src="../../assets/js-core/transition.js"></script>-->
+    <!-- <script type="text/javascript" src="../../assets/js-core/modernizr.js"></script>
+    <script type="text/javascript" src="../../assets/js-core/jquery-cookie.js"></script> -->
+
+    <script>if (window.module) module = window.module;</script>
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            setTimeout(function () {
+                $('#loading').fadeOut(400, "linear");
+            }, 300);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="loading">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            background: #fff;
+        }
+    </style>
+
+    <div class="center-vertical">
+        <div class="center-content row" style="padding: 0">
+
+            <div id="login-validation" class="col-md-4 col-sm-5 col-xs-11 col-lg-3 center-margin"
+                style="max-width: 340px;">
+                <!-- <h3 class="text-center pad25B font-gray text-transform-upr font-size-23">Monarch Admin <span class="opacity-80">v1.0</span></h3> -->
+                <div id="login-form" class="content-box bg-default">
+                    <div class="content-box-wrapper pad20A">
+                        <!-- <img class="mrg25B center-margin display-block" src="../../../includes/images/logo.png" alt=""
+                            style="max-height: 130px; max-width: 100%; margin-bottom: 0"> -->
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span style="font-weight: bolder">
+                                    Activation Key
+                                </span>
+                                <input class="form-control" id="txtActivationKey" placeholder="Enter activation key"
+                                    maxlength="100">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span style="font-weight: bolder">
+                                    Registartion Number
+                                </span>
+                                <input class="form-control" id="txtRegistrationNo"
+                                    placeholder="Enter registration number" maxlength="100">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span style="font-weight: bolder">
+                                    Student Name
+                                </span>
+                                <input class="form-control" id="txtName" placeholder="Enter name" maxlength="100">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span style="font-weight: bolder">
+                                    Student Email Id
+                                </span>
+                                <input class="form-control" id="txtEmailId" placeholder="Enter email id"
+                                    maxlength="100">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-group">
+                                <div class="checkbox-primary">
+                                    <input type="checkbox" id="chkAccept" class="custom-checkbox"
+                                        style="vertical-align:middle">
+                                    <label for="chkAccept" style="display: inline"> I hereby declare that I will appear
+                                        for the examination with
+                                        full sanctity and will not indulge in any malpractice.</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div id="LoginLoader" style="text-align: center; visibility: hidden; margin-bottom: 2px">
+                                <div class="loading-stick">
+                                    <div class="stick bg-azure"></div>
+                                    <div class="stick bg-azure"></div>
+                                    <div class="stick bg-azure"></div>
+                                    <div class="stick bg-azure"></div>
+                                    <h1 id="h1LoadingStatus"></h1>
+                                </div>
+                            </div>
+                            <button id="btnLogin" class="btn btn-block btn-primary">Login to start</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal" id="EnterAllFieldsModal" role="dialog">
+        <div class="modal-dialog modal-md border-top border-red">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 id="EnterAllFieldsModalh4" class="modal-title"></h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../assets/tether/js/tether.js"></script>
+    <script type="text/javascript" src="../../assets/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Bootstrap Dropdown -->
+
+    <!-- <script type="text/javascript" src="../../assets/widgets/dropdown/dropdown.js"></script> -->
+
+    <!-- Bootstrap Tooltip -->
+
+    <!-- <script type="text/javascript" src="../../assets/widgets/tooltip/tooltip.js"></script> -->
+
+    <!-- Bootstrap Popover -->
+
+    <!-- <script type="text/javascript" src="../../assets/widgets/popover/popover.js"></script> -->
+
+    <!-- Bootstrap Progress Bar -->
+
+    <script type="text/javascript" src="../../assets/widgets/progressbar/progressbar.js"></script>
+
+    <!-- Bootstrap Buttons -->
+
+    <!-- <script type="text/javascript" src="../../assets/widgets/button/button.js"></script> -->
+
+    <!-- Bootstrap Collapse -->
+
+    <!-- <script type="text/javascript" src="../../assets/widgets/collapse/collapse.js"></script> -->
+
+    <!-- Superclick -->
+
+    <script type="text/javascript" src="../../assets/widgets/superclick/superclick.js"></script>
+
+    <!-- Input switch alternate -->
+
+    <script type="text/javascript" src="../../assets/widgets/input-switch/inputswitch-alt.js"></script>
+
+    <!-- Slim scroll -->
+
+    <script type="text/javascript" src="../../assets/widgets/slimscroll/slimscroll.js"></script>
+
+    <!-- Slidebars -->
+
+    <script type="text/javascript" src="../../assets/widgets/slidebars/slidebars.js"></script>
+    <script type="text/javascript" src="../../assets/widgets/slidebars/slidebars-demo.js"></script>
+
+    <!-- PieGage -->
+
+    <script type="text/javascript" src="../../assets/widgets/charts/piegage/piegage.js"></script>
+    <script type="text/javascript" src="../../assets/widgets/charts/piegage/piegage-demo.js"></script>
+
+    <!-- Screenfull -->
+
+    <script type="text/javascript" src="../../assets/widgets/screenfull/screenfull.js"></script>
+
+    <!-- Content box -->
+
+    <script type="text/javascript" src="../../assets/widgets/content-box/contentbox.js"></script>
+
+    <!-- Overlay -->
+
+    <script type="text/javascript" src="../../assets/widgets/overlay/overlay.js"></script>
+
+    <!-- Widgets init for demo -->
+
+    <!-- <script type="text/javascript" src="../../assets/js-init/widgets-init.js"></script> -->
+
+    <!-- Theme layout -->
+
+    <script type="text/javascript" src="../../assets/themes/admin/layout.js"></script>
+
+    <!-- Theme switcher -->
+
+    <script type="text/javascript" src="../../assets/widgets/sweet-alert/sweetalert2.min.js"></script>
+
+    <!-- <script type="text/javascript" src="../../assets/widgets/theme-switcher/themeswitcher.js"></script> -->
+    <script>
+        // var iframeUrl = 'https://stageoas.scdl.net/AssessmentServer/renderingEngine/Main.html';
+        // var SubmitFormUrl = 'https://gst-centre-staging.azurewebsites.net/API/Symbiosis/SubmitPreExamForm.ashx';
+
+        var iframeUrl = 'https://oas.scdl.net/AssessmentServer/renderingEngine/Main.html';
+        var SubmitFormUrl = 'https://gstcentreproduction.azurewebsites.net/API/Symbiosis/SubmitPreExamForm.ashx';
+
+
+
+        $(document).ready(function () {
+            $('#btnLogin').click(function () {
+                //Validation:
+                var txtActivationKey = $('#txtActivationKey').val().trim();
+                var txtRegistrationNo = $('#txtRegistrationNo').val().trim();
+                var txtName = $('#txtName').val().trim();
+                var txtEmailId = $('#txtEmailId').val().trim();
+                var chkAccept = $('#chkAccept').is(':checked');
+
+                if (txtActivationKey == '') {
+                    $('#EnterAllFieldsModalh4').text('Please enter your activation key');
+                    $('#EnterAllFieldsModal').modal('show');
+                    return;
+                }
+                else if (txtRegistrationNo == '') {
+                    $('#EnterAllFieldsModalh4').text('Please enter your registration number');
+                    $('#EnterAllFieldsModal').modal('show');
+                    return;
+                }
+                else if (txtName == '') {
+                    $('#EnterAllFieldsModalh4').text('Please enter your name');
+                    $('#EnterAllFieldsModal').modal('show');
+                    return;
+                }
+                else if (txtEmailId == '') {
+                    $('#EnterAllFieldsModalh4').text('Please enter your email id');
+                    $('#EnterAllFieldsModal').modal('show');
+                    return;
+                }
+                else if (chkAccept === false) {
+                    $('#EnterAllFieldsModalh4').text('Please accept the terms and conditions');
+                    $('#EnterAllFieldsModal').modal('show');
+                    return;
+                }
+
+                $('#LoginLoader').css('visibility', 'visible');
+                $("input, button").prop( 'disabled', true);
+                localStorage.clear();
+                $.ajax(
+                    {
+                        url: SubmitFormUrl,
+                        type: "POST",
+                        data: {
+                            "ActivationKey": txtActivationKey,
+                            "RegistrationNo": txtRegistrationNo,
+                            "StudentName": txtName,
+                            "EmailId": txtEmailId
+                        },
+
+                        success: function (result) {
+                            $("input, button").prop( 'disabled', false);
+                            $('#LoginLoader').css('visibility', 'hidden');
+                            console.log('Form Submit Result: ' + JSON.stringify(result));
+                            if (result.IsError === false) {
+                                localStorage.setItem('ActivationKey', result.ActivationKey)
+
+                                //If all is well, call the start API:
+                                //StartExam('Symbiosis Exam', '', 'SYMB09874', 'Neville K', 'SYMBId-0002', '1');
+
+                                if (window.location !== window.parent.location) {
+                                    window.parent.postMessage({
+                                        'msg': 'start', //Mandatory property
+                                        'ActivationKey': result.ActivationKey,
+                                        'RegistrationNo': result.RegistrationNo,
+                                        'StudentName': result.StudentName,
+                                        'EmailId': result.EmailId,
+                                        'SubjectName': result.SubjectName,
+                                        'ProctorLogin': result.ProctorLogin
+                                    }, "*");
+                                }
+
+                                //If all goes well, redirect the user to the Symbiosis page:
+                                //REMEMBER TO CHANGE IN PRODUCTION:
+                                location.href = iframeUrl;
+                            }
+                            else {
+                                $('#EnterAllFieldsModalh4').text(result.ErrorMsg);
+                                $('#EnterAllFieldsModal').modal('show');
+                            }
+                        },
+                        error: function (data) {
+                            $("input, button").prop( 'disabled', false);
+                            $('#LoginLoader').css('visibility', 'hidden');
+                            swal("Unable to connect", 'Please check your internet connection. Kindly restart the application to try again.', "error").then(function () {
+
+                            });
+                        }
+                    });
+            });
+        });
+    </script>
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="../../../includes/js/OfflineJs/offline-theme-dark.css">
+    <link rel="stylesheet" type="text/css" href="../../../includes/js/OfflineJs/offline-language-english.css">
+    <script src="../../../includes/js/OfflineJs/offline.min.js"></script> -->
+    <script>
+        // const AssessmentConfig = require('../../../assessment-config.json');
+
+        // Offline.options = {
+        //     // Should we check the connection status immediatly on page load.
+        //     checkOnLoad: true,
+
+        //     // Should we monitor AJAX requests to help decide if we have a connection.
+        //     interceptRequests: true,
+
+        //     // Should we automatically retest periodically when the connection is down (set to false to disable).
+        //     reconnect: {
+        //         // How many seconds should we wait before rechecking.
+        //         initialDelay: 3,
+
+        //         // How long should we wait between retries.
+        //         delay: 10
+        //     },
+
+        //     // Should we store and attempt to remake requests which fail while the connection is down.
+        //     requests: true,
+
+        //     // Should we show a snake game while the connection is down to keep the user entertained?
+        //     // It's not included in the normal build, you should bring in js/snake.js in addition to
+        //     // offline.min.js.
+        //     game: false,
+        //     checks: { xhr: { url: AssessmentConfig.GetIceServers } }
+        // }
+        var isMin = false;
+        function detectMinMax() {
+            if (((window.screenLeft && window.screenLeft == -32000) || (window.screenX && window.screenX == -32000))) {
+                console.log('window has just been minimized!');
+                //isMin = true;
+            } else if (((window.screenLeft && window.screenLeft != -32000) || (window.screenX && window.screenX != -32000))) {
+                console.log('window has just been unminized!');
+                // window has just been unminized!
+                //isMin = false;
+            }
+        }
+        setInterval(() => {
+            detectMinMax();
+        }, 500);
+
+    </script>
+
+</body>
+
+</html>
