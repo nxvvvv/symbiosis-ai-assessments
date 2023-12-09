@@ -8,3 +8,6 @@ You can install this software inside VMWare and then perform all other actions o
 
 > [!IMPORTANT]
 > I will not be distributing the compiled executable file of the fully patched Symbiosis software for certain reasons. Please compile and run the executable as needed. Ensure compliance with the [LICENSE](https://github.com/nxvvvv/symbiosis-ai-assessments/blob/main/LICENSE).
+
+> [!NOTE]
+> Look out for the latest SRM UG app patched version at [https://github.com/nxvvvv/srm-ug](https://github.com/nxvvvv/srm-ug).
